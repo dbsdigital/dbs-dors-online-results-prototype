@@ -11,6 +11,12 @@
 {% block header %}
   <!-- Blank header with no service name for the start page -->
   {{ govukHeader() }}
+  {% block govukServiceNavigation %}
+    {{ govukServiceNavigation({
+    serviceName: "Track your DBS check",
+    serviceUrl: ""
+  }) }}
+  {% endblock %}
 {% endblock %}
 
 {% block beforeContent %}
