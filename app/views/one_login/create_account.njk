@@ -1,4 +1,5 @@
-{% extends "../layouts/layout_standard.njk" %}
+{% extends "../layouts/layout_onelogin.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
 
 {% block pageTitle %}
   Create an account or sign in – {{ serviceName }} – GOV.UK Prototype Kit
@@ -20,25 +21,25 @@
 
 {% block content %}
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-thirds">
+    <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l govuk-!-margin-top-0 govuk-!-margin-bottom-3">
-        Create a GOV.UK One Login or sign in
+        Create your GOV.UK One Login or sign in
       </h1>
 
-      <p class="govuk-body">You'll need:</p>
+      <p>You can use your GOV.UK One Login to access some government services.</p>
+      <p>In the future, you'll be able to use it to access all services on GOV.UK.</p>
+      <p>You'll need:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>an email address</li>
-        <li>a way to get security codes - this can be a mobile phone number or an authenticator app</li>
+        <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
       </ul>
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
       {{ govukInsetText({
-  html: "<p>GOV.UK One Login is also available <a href='' classes='govuk-link'>in Welsh (Cymraeg)</a></p>"
-}) }}
-
-      {% from "govuk/components/button/macro.njk" import govukButton %}
+        html: "<p>You can also <a href='' classes='govuk-link'>use GOV.UK One Login in Welsh (Cymraeg)</a></p>"
+      }) }}
 
       {{ govukButton({
         text: "Create a GOV.UK One Login",
@@ -47,25 +48,15 @@
         classes: "govuk-!-margin-right-3"
       }) }}
 
+      <div class="one-login-sign-in-div">
       {{ govukButton({
         text: "Sign in",
         href: "/sign_in",
         classes: "govuk-button--secondary"
       }) }}
+      </div>
 
-      <details class="govuk-details" data-module="govuk-details">
-        <summary class="govuk-details__summary">
-          <span class="govuk-details__summary-text">
-            About GOV.UK One Login
-          </span>
-        </summary>
-        <div class="govuk-details__text">
-          <p class="govuk-body">GOV.UK One Login is new. At the moment you can only use it to access some government services.</p>
-          <p class="govuk-body">It does not work with all government accounts or services yet (for example Government Gateway or
-            Universal Credit).</p>
-          <p class="govuk-body">In the future, you’ll be able to use GOV.UK One Login to access all services on GOV.UK.</p>
-        </div>
-      </details>
+      <p><a href="https://www.gov.uk/using-your-gov-uk-one-login/services">Services you can use with GOV.UK One Login (opens in new tab)</a></p>
     </div>
 
   </div>
