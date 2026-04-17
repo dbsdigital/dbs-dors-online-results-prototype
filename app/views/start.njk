@@ -1,4 +1,5 @@
 {% extends "layouts/layout_standard.njk" %}
+{% from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect %}
 
 {% block pageTitle %}
   View your online result – {{ serviceName }} – GOV.UK Prototype Kit
@@ -9,8 +10,19 @@
     tag: {
       text: "beta"
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: "Mae hwn yn wasanaeth newydd. Helpwch ni i'w wella a<a class='govuk-link' target='_blank' href='#''>
+      rhoi eich adborth (yn agor mewn tab newydd).</a>" if data['lang'] == "cy" else
+      'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">
+      give your feedback (opens in a new tab).</a>'
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
 {% endblock %}
 
@@ -25,33 +37,47 @@
         </h1>
       {% else %}
         <h1 class="govuk-heading-xl">
-          View or Share your DBS Result
+          {{"Gweld neu rannu eich canlyniad DBS" if data['lang'] == "cy" else "View or Share your DBS Result"}}
         </h1>
       {% endif %}
 
-      <p>You can use this service to:</p>
+      <p>{{"Gallwch ddefnyddio’r gwasanaeth hwn i:" if data['lang'] == "cy" else "You can use this service to:"}}</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>view your DBS Result</li>
-        <li>share your result with someone else, like an employer</li>
-        <li>find out how to contact us if you believe any information on your result is incorrect</li>
+        {% if data['lang'] == "cy" %}
+          <li>gweld eich canlyniad DBS</li>
+          <li>rhannu'ch canlyniad gyda rhywun arall, fel cyflogwr</li>
+          <li>darganfod sut i gysylltu â ni os ydych yn credu bod unrhyw wybodaeth am eich canlyniad yn anghywir</li>
+        {% else %}
+          <li>view your DBS Result</li>
+          <li>share your result with someone else, like an employer</li>
+          <li>find out how to contact us if you believe any information on your result is incorrect</li>
+        {% endif %}
       </ul>
 
-      <h2 class="govuk-heading-m">Viewing your result</h2>
+      <h2 class="govuk-heading-m">{{"Gweld eich Canlyniad" if data['lang'] == "cy" else "Viewing your result"}}</h2>
 
-      <p>To view your result you will need to sign in to the GOV.UK One Login you created when you applied.</p>
-      <p>If you have more than one application you will also need your application number, which we have emailed to you.</p>
+      {% if data['lang'] == "cy" %}
+        <p>I weld eich canlyniad bydd angen i chi fewngofnodi i'r GOV.UK One Login a grëwyd gennych pan wnaethoch gais.</p>
+        <p>Os oes gennych fwy nag un cais bydd angen eich rhif cais hefyd, rydym wedi ei e-bostio atoch.</p>
+      {% else %}
+        <p>To view your result you will need to sign in to the GOV.UK One Login you created when you applied.</p>
+        <p>If you have more than one application you will also need your application number, which we have emailed to you.</p>
+      {% endif %}
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
       {{ govukInsetText({
-        text: "We will sign you out if you are inactive for 15 minutes. This is to help protect your information. Your information will not be saved and you will need to start again."
+        text: "Byddwn yn eich allgofnodi os nad ydych yn weithgar am 15 munud. Mae hyn er mwyn helpu i ddiogelu'ch 
+        gwybodaeth. Ni fydd eich gwybodaeth yn cael ei chadw a bydd angen i chi ddechrau eto." if data['lang'] == "cy" else
+        "We will sign you out if you are inactive for 15 minutes. This is to help protect your information. 
+        Your information will not be saved and you will need to start again."
       }) }}
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-          text: "Start",
+          text: "Dechrau" if data['lang'] == "cy" else "Start",
           isStartButton: true,
           classes: 'govuk-!-margin-top-2 govuk-!-margin-bottom-8',
           href: "/create_account"

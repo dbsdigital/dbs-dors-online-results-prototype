@@ -2,8 +2,17 @@
 For guidance on how to use layouts see:
 https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
-{% set serviceName="View someone's DBS result" %}
+{% set serviceName = "View someone's DBS result" %}
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
 {% block head %}
   {% include "includes/head.njk" %}
+{% endblock %}
+{% block header %}
+  {{ govukHeader({
+    homepageUrl: "/start"
+  }) }}
+  {{ govukServiceNavigation({
+    serviceName: "View someone's DBS result",
+    serviceUrl: "/start"
+  }) }}
 {% endblock %}

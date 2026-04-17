@@ -23,41 +23,45 @@
   idPrefix: "company-details",
   items: [
     {
+      classes: "no-border-top",
       title: {
         text: "Stage 1",
-        classes: "govuk-heading-s"
+        classes: "govuk-heading-m no-border-top"
       },
       hint: {
         text: "Application received"
       },
       status: {
-        text: "Completed " + formattedDateOneWeekAgo
+        text: "Completed " + formattedDateOneWeekAgo,
+        classes: "vertical-align-bottom"
       }
     },
     {
       title: {
         text: "Stage 2",
-        classes: "govuk-heading-s"
+        classes: "govuk-heading-m"
       },
       hint: {
         text: "Police National Computer searched"
       },
       status: {
+        classes: "vertical-align-bottom",
         tag: {
           text: "In progress",
-          classes: "govuk-tag--light-blue"
+          classes: "govuk-tag--light-blue vertical-align-bottom"
         }
       }
     },
     {
       title: {
         text: "Stage 3",
-        classes: "govuk-heading-s"
+        classes: "govuk-heading-m"
       },
       hint: {
         text: "Barred lists checked (if required)"
       },
       status: {
+        classes: "vertical-align-bottom",
         tag: {
           text: "Not started",
           classes: "govuk-tag--blue"
@@ -67,12 +71,13 @@
     {
       title: {
         text: "Stage 4",
-        classes: "govuk-heading-s"
+        classes: "govuk-heading-m"
       },
       hint: {
         text: "Records held by police searched"
       },
       status: {
+        classes: "vertical-align-bottom",
         tag: {
           text: "Not started",
           classes: "govuk-tag--blue"
@@ -82,12 +87,13 @@
     {
       title: {
         text: "Stage 5",
-        classes: "govuk-heading-s"
+        classes: "govuk-heading-m"
       },
       hint: {
         text: "DBS check issued"
       },
       status: {
+        classes: "vertical-align-bottom",
         tag: {
           text: "Not started",
           classes: "govuk-tag--blue"

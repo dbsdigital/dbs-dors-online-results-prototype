@@ -1,5 +1,6 @@
 {% extends "govuk-prototype-kit/layouts/unbranded.njk" %}
 {% from "one_login/header/service-header.njk" import govukOneLoginServiceHeader %}
+{% from "govuk/components/footer/macro.njk" import govukFooter %}
 {% block head %}
   {% include "includes/head.njk" %}
 
@@ -30,11 +31,15 @@
     rebrand: true,
     serviceNavigationParams:
     {
-      serviceName: "DBS online result service",
+      serviceName: "View or share your DBS result",
       navigation: navItems
     },
     signOutLink: "/sign-out",
     signOutText: "Sign out",
     oneLoginLink: "#"
   }) }}
+{% endblock %}
+
+{% block footer %}
+  {{ govukFooter({}) }}
 {% endblock %}

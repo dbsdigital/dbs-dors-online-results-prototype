@@ -15,18 +15,24 @@
     html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
   }) }}
 
+    {{ govukBackLink({
+    href: '/applicant-share-1',
+    text: "Back"
+  }) }}
+
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
 
-    <div class="govuk-width-container">
+    <div class="govuk-grid-column-two-thirds">
 
       <div id="share-result">
-        <h2 class="govuk-heading-m">Tell us who you are sharing your DBS Online Result with</h2>
+        <h1 class="govuk-heading-l">Who are you sharing your online result with?</h1>
+        <p>They will see the organisation name you enter here.</p>
         <div class="govuk-form-group">
           <div class="govuk-grid-column-two-thirds" style="padding: 0;">
-            <label class="govuk-label" for="event-name" style="color: #505a5f;">
+            <label class="govuk-label govuk-label--m" for="event-name">
               Organisation name
             </label>
 

@@ -1,5 +1,5 @@
 {% extends "layouts/layout_standard.njk" %}
-{% set serviceName="DORS Prototype Journeys" %}
+{% set serviceName = "DORS Prototype Journeys" %}
 {% from "govuk/components/table/macro.njk" import govukTable %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% block pageTitle %}
@@ -71,7 +71,7 @@
               [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Result Available Email (title 1)"
+                  text: "Applicant Result Available Email"
               },
               {
                 classes: "govuk-!-width-one-quarter",
@@ -89,31 +89,10 @@
                     text: "The email an applicant receives when the result is ready to view."
                   }
               ],
-                            [
-              {
-                classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Result Available Email (title 2)"
-              },
-              {
-                classes: "govuk-!-width-one-quarter",
-                html:
-                  govukButton({
-                    text: "Start",
-                    href: "/applicant/title"
-                  }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant\")'>
-                        Copy Link
-                      </button>"
-                },
-                {
-                  classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when the result is ready to view."
-                  }
-              ],
               [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Landing (title 1)"
+                  text: "Applicant Landing"
               },
               {
                 classes: "govuk-!-width-one-quarter",
@@ -121,27 +100,6 @@
                   govukButton({
                     text: "Start",
                     href: "/start"
-                  }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/start\")'>
-                        Copy Link
-                      </button>"
-                },
-                {
-                  classes: "govuk-!-width-one-half",
-                    text: "The first page an applicant lands on in the DORS journey after clicking the link in the applicant email, before GOV UK One Login sign in."
-                  }
-              ],
-                          [
-              {
-                classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Landing (title 2)"
-              },
-              {
-                classes: "govuk-!-width-one-quarter",
-                html:
-                  govukButton({
-                    text: "Start",
-                    href: "/start/title"
                   }) + "" +
                     "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/start\")'>
                         Copy Link
@@ -241,6 +199,69 @@
 
 
           }) }}
+      <p>Archived Journeys.</p>
+      {{ govukTable({
+            firstCellIsHeader: false,
+            head: [
+            {
+              text: "Journey"
+              },
+              {
+                text: "Actions"
+              },
+              {
+                text: "Description"
+              }
+            ],
+            rows: [
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result Available Email (title 2)"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant/title"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when the result is ready to view."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Landing (title 2)"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/start/title"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/start\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The first page an applicant lands on in the DORS journey after clicking the link in the applicant email, before GOV UK One Login sign in."
+                  }
+              ]
+
+              ]
+
+
+          }) }}
+
     </div>
   </div>
 

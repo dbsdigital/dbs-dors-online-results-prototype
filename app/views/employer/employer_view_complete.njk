@@ -1,4 +1,6 @@
 {% extends "layouts/layout_employer.njk" %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
 {% block pageTitle %}
   View results complete – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
@@ -19,20 +21,10 @@
 
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
-      {% set html %}
-      <div style="text-align: center">
-        <h1 class="govuk-heading-xl" style="margin-bottom: 25px">DBS Online Result viewed</h1>
-        <p class="govuk-body">Certificate reference number</p>
-        <p class="govuk-!-font-weight-bold" style="margin-bottom: 0;">XXXXXX176560</p>
-      </div>
-
-      {% endset %}
-
-      {{ govukNotificationBanner({
-  html: html,
-  type: "success",
-  titleText: "Success"
-}) }}
+      {{ govukPanel({
+        titleText: "DBS online result viewed",
+        html: "Certificate reference number<br><strong>XXXXXX176560</strong>"
+      }) }}
       <p>
         We have told the applicant you have viewed their result.
       </p>
@@ -47,7 +39,7 @@
       <p>
         Please
         <a class="govuk-link" href="https://give-feedback-dbs.service.gov.uk/#/en/e-result" target="_blank">use our feedback
-          form (opens in a new tab)</a>
+          form</a>
         to tell us what you think of our service.
       </p>
 
