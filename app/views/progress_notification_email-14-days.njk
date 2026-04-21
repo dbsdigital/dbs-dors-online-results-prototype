@@ -1,0 +1,35 @@
+{% extends "layouts/layout_email.njk" %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+
+{% block pageTitle %}
+  Email with 14 day progress notification – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <p>Dear Bill Carr,</p>
+
+      <p>Your standard DBS check submitted on 20/04/2026 is still in progress.</p>
+
+      <p>You do not need to contact us. We are doing everything we can to complete your DBS check as quickly as possible.</p>
+
+      {{ govukInsetText({
+        text: "Your application reference number is E036125498"
+      }) }}
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p>We will email you when your DBS check is complete.</p>
+
+      <p>You can also
+        <a href="./progress_tracker/stage2.njk">track the progress of your DBS check.
+        </a>
+      </p>
+      
+    </div>
+
+  </div>
+
+{% endblock %}
