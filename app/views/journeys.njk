@@ -50,6 +50,48 @@
               [
               {
                 classes: "govuk-!-width-one-quarter",
+                  text: "Progress Notification Email - 14 Days"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/progress_notification_email-14-days"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-14-days\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when 14 days have passed but their application is not yet ready to view."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Progress Notification Email - 28 Days"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/progress_notification_email-28-days"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-28-days\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when 28 days have passed but their application is not yet ready to view."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
                   text: "Application Status Tracker"
               },
               {
