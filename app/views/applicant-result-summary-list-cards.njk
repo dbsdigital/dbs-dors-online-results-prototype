@@ -1,0 +1,135 @@
+{% extends "layouts/layout_onelogin.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% set pageId = "view-your-result" %}
+
+{% block pageTitle %}
+  Your online result – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "beta"
+    },
+    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-width-container">
+
+      {% include "result_partial_summary_list_cards.njk" %}
+
+      <a href="/applicant-share-1" class="govuk-button">
+        Share Result
+      </a>
+
+      {{ govukInsetText({
+                  html: "<p>You can <a href='/applicant-contact'>contact DBS</a> if you need to report a mistake or dispute the result.</p>"
+                }) }}
+
+      {{ govukDetails({
+          summaryText: "Disclaimer",
+          html: "
+            <h3>Enhanced DBS online result</h3>
+            <p>
+              This Disclosure and Barring Service (DBS) online result is a Enhanced Criminal 
+              Record Certificate within the meaning of the following sections of the Police Act 1997 
+              (the Act):
+            </p>
+            <ul>
+              <li>s.113B</li>
+              <li>s.116</li>
+            </ul>
+            <h3>Use of DBS online result information</h3>
+            <p>
+              The information contained in this DBS online result is confidential. All recipients
+              must keep it secure and protect it from loss or unauthorised access.
+            </p>
+            <p>
+              This DBS online result must only be used under the terms of the DBS Code of Practice 
+              and any other DBS guidance. It is particularly important to follow the guidance on 
+              fair use of the information showing a conviction or similar information.
+            </p>
+            <p>
+              DBS will check the compliance of Registered Bodies with this Code of Practice
+              and other guidance.
+            </p>
+            <p>
+              This DBS online result is issued under Part V of the Act. Part V of the Act 
+              creates several offences, including:
+            </p>
+            <ul>
+              <li>forgery or alteration of a Certificate</li>
+              <li>obtaining a Certificate under false pretences</li>
+              <li>using a Certificate issued to another person as if it was one’s own</li>
+            </ul>
+            <p>
+              This DBS online result is not evidence of identity and does not establish entitlement to 
+              work in the UK.
+            </p>
+            <h3>DBS online result content</h3>
+            <p>The personal identity details contained in this DBS online result are those:</p>
+            <ul>
+              <li>supplied by or on behalf of the applicant at the time of the application</li>
+              <li>that appear to match any conviction or other details linked to that identity</li>
+            </ul>
+            <p>The information contained in this DBS online result is derived from:</p>
+            <ul>
+              <li>police records</li>
+              <li>other records of those who are unsuitable to work with children and/or adults</li>
+            </ul>
+            <p>
+              The police records are those held on the Police National Computer (PNC). 
+              The PNC contains details of:
+            </p>
+            <ul>
+              <li>convictions, cautions, reprimands and warnings in England and Wales</li>
+              <li>relevant convictions in Scotland and Northern Ireland</li>
+            </ul>
+            <p>
+              DBS reserves the right to add new data sources. For the most up to date list of data sources 
+              searched by DBS please visit
+              <a class='govuk-body govuk-link' href='https://www.gov.uk/government/organisations/disclosure-and-barring-service' target='_blank'>the DBS page (opens in a new tab)</a>
+              on gov.uk.
+            </p>
+            <p>
+              DBS also looks at the position being sought by the applicant and may seek other information. 
+              Any Other Relevant Information found is disclosed is at the discretion of the Chief Police 
+              Officers or those of an equivalent level in other policing agencies.
+            </p>
+            <h3>DBS online result accuracy</h3>
+            <p>DBS is not responsible for the accuracy of police records.</p>
+            <p>
+              If the applicant is aware of any inaccuracy in the DBS online result they should 
+              contact the Countersignatory immediately. This is to prevent an inappropriate decision 
+              about their suitability. The Countersignatory will:
+            </p>
+            <ul>
+              <li>advise how to dispute that information</li>
+              <li>arrange for it to be referred to the DBS on the applicant's behalf</li>
+            </ul>
+            <p>The information should be disputed within 3 months of the date of issue of the DBS online result.</p>
+            <p>DBS will seek to resolve the matter with the source of the record and applicant.</p>
+            <p>
+              Sometimes a dispute can only be resolved using fingerprints. The applicant's consent is 
+              required for this.
+            </p>
+            <p>
+              If DBS upholds the dispute DBS will issue a new DBS online result free-of-charge. For details of the DBS disputes and complaints procedures please visit
+              <a class='govuk-body govuk-link' href='https://www.gov.uk/government/organisations/disclosure-and-barring-service' target='_blank'>the DBS page (opens in a new tab)</a>
+              on gov.uk.
+            </p>
+          "
+        }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}{% block footer %}
+{% include "footer.njk" %}{% endblock %}

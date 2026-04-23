@@ -1,0 +1,164 @@
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+<img src="/public/images/Disclosure_and_Barring_Service_Logo.svg" class="dbs-logo">
+
+<div
+  class="govuk-notification-banner govuk-notification-banner--success"
+  role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      DBS Check Result
+    </h2>
+  </div>
+
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading" id="banner-content">
+      This Enhanced DBS Check is clear
+    </p>
+    <p>This Enhanced DBS Check was issued on
+      <strong>08/12/2022.</strong>
+    </p>
+    <p>
+      <strong>It is only valid when viewed online. It is not valid if printed.</strong>
+    </p>
+  </div>
+</div>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Certificate Number"
+      },
+      value: {
+        text: "001122334455"
+      }
+    },
+    {
+      key: {
+        text: "Application Number"
+      },
+      value: {
+        text: "E0123456789"
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">Applicant Details</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Name"
+      },
+      value: {
+        text: "Bill Carr"
+      }
+    },
+    {
+      key: {
+        text: "Other/Previous Names"
+      },
+      value: {
+        text: "	None Declared"
+      }
+    },
+    {
+      key: {
+        text: "Date of Birth"
+      },
+      value: {
+        text: "02 April 1955"
+      }
+    },
+    {
+      key: {
+        text: "Place of Birth"
+      },
+      value: {
+        text: "Ipswich"
+      }
+    },
+    {
+      key: {
+        text: "Address"
+      },
+      value: {
+        text: "10 King Road, IP24 1QR"
+      }
+    },
+    {
+      key: {
+        text: "Sex"
+      },
+      value: {
+        text: "Male"
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">Position Details</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Post Applied For"
+      },
+      value: {
+        text: "Traffic Flow Administrator DBS Fee Charged"
+      }
+    },
+    {
+      key: {
+        text: "Workforce Type"
+      },
+      value: {
+        text: "Child and Adult"
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">Recorded Details</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: "Police records of convictions and cautions"
+      },
+      value: {
+        text: "None Recorded"
+      }
+    },
+    {
+      key: {
+        text: "DBS Children's Barred List information"
+      },
+      value: {
+        text: "None Recorded"
+      }
+    },
+    {
+      key: {
+        text: "DBS Adults' Barred List information"
+      },
+      value: {
+        text: "None Recorded"
+      }
+    },
+    {
+      key: {
+        text: "Other relevant information disclosed at the Chief Police Officer(s) discretion"
+      },
+      value: {
+        text: "None Recorded"
+      }
+    }
+  ]
+}) }}

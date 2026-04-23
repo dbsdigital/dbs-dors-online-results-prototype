@@ -1,0 +1,197 @@
+{% from "govuk/components/table/macro.njk" import govukTable %}
+<img src="/public/images/Disclosure_and_Barring_Service_Logo.svg" class="dbs-logo">
+
+<div
+  class="govuk-notification-banner govuk-notification-banner--success"
+  role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      DBS Check Result
+    </h2>
+  </div>
+
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading" id="banner-content">
+      This Enhanced DBS Check is clear
+    </p>
+    <p>This Enhanced DBS Check was issued on
+      <strong>08/12/2022.</strong>
+    </p>
+    <p>
+      <strong>It is only valid when viewed online. It is not valid if printed.</strong>
+    </p>
+  </div>
+</div>
+
+{{ govukTable({
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: "Certificate Number",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "001122334455",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Application Number",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "E0123456789",
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
+
+{{ govukTable({
+  caption: "Applicant Details",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: "Name",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "Bill Carr",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Other/Previous Names",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "None Declared",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Date of Birth",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "02 April 1955",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Place of Birth",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "Ipswich",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Address",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "10 King Road, IP24 1QR",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Sex",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "Male",
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
+
+{{ govukTable({
+  caption: "Position Details",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: "Post Applied For",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "Traffic Flow Administrator DBS Fee Charged",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Workforce Type",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "Child and Adult",
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
+
+{{ govukTable({
+  caption: "Recorded Details",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: "Police records of convictions and cautions",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "None Recorded",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "DBS Children's Barred List information",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "None Recorded",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "DBS Adults' Barred List information",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "None Recorded",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: "Other relevant information disclosed at the Chief Police Officer(s) discretion",
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: "None Recorded",
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
