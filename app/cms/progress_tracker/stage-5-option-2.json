@@ -1,0 +1,14 @@
+{
+    "en": {
+        "title": "We completed your DBS check on ",
+        "p1": "You can share your result with someone else, like your employer.",
+        "linkText": "Sign in",
+        "p2": "to find out how to view and share your result."
+    },
+    "cy": {
+        "title": "Fe wnaethon ni gwblhau eich gwiriad DBS ar ",
+        "p1": "Gallwch rannu eich canlyniad gyda rhywun arall, fel eich cyflogwr.",
+        "linkText": "Mewngofnodwch",
+        "p2": "i ddarganfod sut i weld a rhannu eich canlyniad."
+    }
+}

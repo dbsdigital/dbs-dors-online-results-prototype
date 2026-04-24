@@ -6,6 +6,16 @@
 const govukPrototypeKit = require("govuk-prototype-kit");
 const { get } = require("jquery");
 const router = govukPrototypeKit.requests.setupRouter();
+const commonCms = require('./cms/common.json');
+const stage2Text = require('./cms/progress_tracker/stage-2.json');
+const stage5Option1Text = require('./cms/progress_tracker/stage-5-option-1.json');
+const stage5Option2Text = require('./cms/progress_tracker/stage-5-option-2.json');
+const applicantResultText = require('./cms/applicant-result.json');
+
+router.get("*", (req, res, next) => {
+  res.locals.language = req.query?.lang || 'en';
+  next();
+})
 
 router.get("/progress_tracker/stage2", function (req, res) {
   const today = new Date();
@@ -32,6 +42,8 @@ router.get("/progress_tracker/stage2", function (req, res) {
   res.render("progress_tracker/stage2", {
     currentDate: formattedDate,
     formattedDateOneWeekAgo,
+    cms: stage2Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
   });
 });
 
@@ -73,6 +85,8 @@ router.get("/progress_tracker/stage5_option1", function (req, res) {
     formattedDateSixDaysAgo,
     formattedDateFiveDaysAgo,
     formattedDateTwoDaysAgo,
+    cms: stage5Option1Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
   });
 });
 
@@ -100,6 +114,8 @@ router.get("/progress_tracker/stage5_option2", function (req, res) {
   res.render("progress_tracker/stage5_option2", {
     currentDate: formattedDate,
     formattedDateOneWeekAgo,
+    cms: stage5Option2Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
   });
 });
 
@@ -144,11 +160,23 @@ router.get("/start-nc", (req, res) => {
 
 router.get("/applicant-result", (req, res) => {
   if (req.session?.nc === true) {
-    res.render("applicant-result-not-clear");
+    res.render("applicant-result-not-clear", {
+      cms: applicantResultText[res.locals.language],
+      commonCms: commonCms[res.locals.language]
+    });
   } else {
-    res.render("applicant-result");
+    res.render("applicant-result", {
+      cms: applicantResultText[res.locals.language],
+      commonCms: commonCms[res.locals.language]
+    });
   }
 });
+
+router.get("/applicant-share-1", (req, res) => {
+  res.render("applicant-share-1", {
+    commonCms: commonCms[res.locals.language]
+  })
+})
 
 router.get("/applicant-result-nc", (req, res) => {
   res.render("applicant-result-not-clear");
@@ -377,7 +405,7 @@ router.get("/results_certificate", (req, res, _next) => {
   let result = "revelant information";
   if (
     policeRecordsOfConvictions[0].date_conviction ==
-      "None recorded - Not applicable" &&
+    "None recorded - Not applicable" &&
     infoSection142Education == "None recorded" &&
     dbsChildrenBarList == "None recorded" &&
     dbsAdultBarList == "None recorded" &&

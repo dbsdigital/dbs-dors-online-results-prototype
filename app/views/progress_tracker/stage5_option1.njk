@@ -1,8 +1,27 @@
 {% extends "layouts/layout_progress_tracker.njk" %}
 {% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+{% from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect %}
 
 {% block pageTitle %}
   Your DBS check is complete – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: commonCms.headerText.bannerPhase
+    },
+    html: commonCms.headerText.bannerText
+  }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
+
 {% endblock %}
 
 {% block content %}
@@ -10,12 +29,12 @@
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Your DBS check is complete</h1>
-      <p>You can share your result with someone else, like your employer.</p>
+      <h1 class="govuk-heading-xl">{{cms.title}}</h1>
+      <p>{{cms.p1}}</p>
       <p>
-        <a href="/start-nc">Sign in
+        <a href="/start-nc">{{cms.linkText}}
         </a>
-        to find out how to view and share your result.
+        {{cms.p2}}
       </p>
       <br/> <br/>
 
@@ -24,67 +43,67 @@
   items: [
     {
       title: {
-        text: "Stage 1",
+        text: cms.stage1Title,
         classes: "govuk-heading-s"
       },
       hint: {
-        text: "Application received"
+        text: cms.stage1Description
       },
       status: {
         classes: "vertical-align-bottom",
-        text: "Completed " + formattedDateSevenDaysAgo
+        text: cms.stage1Value + formattedDateSevenDaysAgo
       }
     },
     {
       title: {
-        text: "Stage 2",
+        text: cms.stage2Title,
         classes: "govuk-heading-s"
       },
       hint: {
-        text: "Police National Computer searched"
+        text: cms.stage2Description
       },
       status: {
         classes: "vertical-align-bottom",
-        text: "Completed " + formattedDateSixDaysAgo
+        text: cms.stage2Value + formattedDateSixDaysAgo
       }
     },
     {
       title: {
-        text: "Stage 3",
+        text: cms.stage3Title,
         classes: "govuk-heading-s"
       },
       hint: {
-        text: "Barred lists checked (if required)"
+        text: cms.stage3Description
       },
       status: {
         classes: "vertical-align-bottom",
-        text: "Completed " + formattedDateSixDaysAgo
+        text: cms.stage3Value + formattedDateSixDaysAgo
       }
     },
     {
       title: {
-        text: "Stage 4",
+        text: cms.stage4Title,
         classes: "govuk-heading-s"
       },
       hint: {
-        text: "Records held by police searched"
+        text: cms.stage4Description
       },
       status: {
         classes: "vertical-align-bottom",
-        text: "Completed " + formattedDateFiveDaysAgo
+        text: cms.stage4Value + formattedDateFiveDaysAgo
       }
     },
     {
       title: {
-        text: "Stage 5",
+        text: cms.stage5Title,
         classes: "govuk-heading-s"
       },
       hint: {
-        text: "DBS check issued"
+        text: cms.stage5Description
       },
       status: {
         classes: "vertical-align-bottom",
-        text: "Completed " + formattedDateTwoDaysAgo
+        text: cms.stage5Value + formattedDateTwoDaysAgo
       }
     }
   ]

@@ -1,0 +1,30 @@
+{
+    "cy": {
+        "headerText": {
+            "bannerPhase": "Beta",
+            "bannerText": "Mae hwn yn wasanaeth newydd. Helpwch ni i'w wella a<a class='govuk-link' target='_blank' href='#''> rhoi eich adborth (yn agor mewn tab newydd).</a>"
+        },
+        "navBar": {
+            "serviceText": "Gweld neu rannu eich canlyniad DBS",
+            "tab1": "Gweld eich canlyniad",
+            "tab2": "Rhannu eich canlyniad",
+            "tab3": "Rheoli codau rhannu",
+            "tab4": "Cysylltu â DBS",
+            "signOut": "Allgofnodi"
+        }
+    },
+    "en": {
+        "headerText": {
+            "bannerPhase": "Beta",
+            "bannerText": "This is a new service. Help us improve it and <a class='govuk-link' target='_blank' href='#'>give your feedback (opens in a new tab).</a>"
+        },
+        "navBar": {
+            "serviceText": "View or share your DBS result",
+            "tab1": "View your result",
+            "tab2": "Share your result",
+            "tab3": "Manage share codes",
+            "tab4": "Contact DBS",
+            "signOut": "Sign out"
+        }
+    }
+}

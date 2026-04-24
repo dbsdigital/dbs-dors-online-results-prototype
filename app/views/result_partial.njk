@@ -7,19 +7,19 @@
   data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__header">
     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      DBS Check Result
+      {{cms.certificate.resultBoxLabel}}
     </h2>
   </div>
 
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading" id="banner-content">
-      This Enhanced DBS Check is clear
+      {{cms.certificate.resultBoxHeading}}
     </p>
-    <p>This Enhanced DBS Check was issued on
-      <strong>08/12/2022.</strong>
+    <p>{{cms.certificate.resultBoxP1}}
+      <strong>{{cms.certificate.resultBoxDate}}</strong>
     </p>
     <p>
-      <strong>It is only valid when viewed online. It is not valid if printed.</strong>
+      <strong>{{cms.certificate.resultBoxP2}}</strong>
     </p>
   </div>
 </div>
@@ -27,119 +27,118 @@
 <table class="govuk-table">
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Certificate Number</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Application Number</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key1}}</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key2}}</th>
     </tr>
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">001122334455</td>
-      <td class="govuk-table__cell">E0123456789</td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Applicant Details</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Name</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Other/Previous Names</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Bill Carr</td>
-      <td class="govuk-table__cell">None Declared</td>
-    </tr>
-  </tbody>
-
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Date of Birth</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Place of Birth</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">02 April 1955</td>
-      <td class="govuk-table__cell">Ipswich</td>
-    </tr>
-  </tbody>
-
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Address</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Sex</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell">10 King Road, IP24 1QR</td>
-      <td class="govuk-table__cell">Male</td>
+      <td class="govuk-table__cell">{{cms.certificate.value1}}</td>
+      <td class="govuk-table__cell">{{cms.certificate.value2}}</td>
     </tr>
   </tbody>
 </table>
 
 <table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Position Details</caption>
+  <caption class="govuk-table__caption govuk-table__caption--m">{{cms.certificate.tableHeading1}}</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Post Applied For</th>
-      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">Workforce Type</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key3}}</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key4}}</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">Traffic Flow Administrator <br> DBS Fee Charged
+      <td class="govuk-table__cell">{{cms.certificate.value3}}</td>
+      <td class="govuk-table__cell">{{cms.certificate.value4}}</td>
+    </tr>
+  </tbody>
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key5}}</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key6}}</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">{{cms.certificate.value5}}</td>
+      <td class="govuk-table__cell">{{cms.certificate.value6}}</td>
+    </tr>
+  </tbody>
+
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key7}}</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key8}}</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">{{cms.certificate.value7}}</td>
+      <td class="govuk-table__cell">{{cms.certificate.value8}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">{{cms.certificate.tableHeading2}}</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key9}}</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-half-override">{{cms.certificate.key10}}</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">{{cms.certificate.value9a}} <br> {{cms.certificate.value9b}}
       </td>
-      <td class="govuk-table__cell">Child and Adult</td>
+      <td class="govuk-table__cell">{{cms.certificate.value10}}</td>
     </tr>
   </tbody>
 </table>
 
 <table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Recorded Details</caption>
+  <caption class="govuk-table__caption govuk-table__caption--m">{{cms.certificate.tableHeading3}}</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Police records of convictions and cautions</th>
+      <th scope="col" class="govuk-table__header">{{cms.certificate.key11}}</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">None Recorded</td>
+      <td class="govuk-table__cell">{{cms.certificate.value11}}</td>
     </tr>
   </tbody>
 
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">DBS Children's Barred List information</th>
+      <th scope="col" class="govuk-table__header">{{cms.certificate.key12}}</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">None Recorded</td>
+      <td class="govuk-table__cell">{{cms.certificate.value12}}</td>
     </tr>
   </tbody>
 
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">DBS Adults' Barred List information</th>
+      <th scope="col" class="govuk-table__header">{{cms.certificate.key13}}</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">None Recorded</td>
+      <td class="govuk-table__cell">{{cms.certificate.value13}}</td>
     </tr>
   </tbody>
 
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Other relevant information disclosed at the Chief Police Officer(s)
-        discretion</th>
+      <th scope="col" class="govuk-table__header">{{cms.certificate.key14}}</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <td class="govuk-table__cell">None Recorded</td>
+      <td class="govuk-table__cell">{{cms.certificate.value14}}</td>
     </tr>
   </tbody>
 </table>

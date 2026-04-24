@@ -4,17 +4,35 @@
   Completed your DBS check – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: commonCms.headerText.bannerPhase
+    },
+    html: commonCms.headerText.bannerText
+  }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
+
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">We completed your DBS check on {{ currentDate }}</h1>
-      <p>You can share your result with someone else, like your employer.</p>
+      <h1 class="govuk-heading-xl">{{cms.title}}{{ currentDate }}</h1>
+      <p>{{cms.p1}}</p>
       <p>
-        <a href="/start-nc">Sign in
+        <a href="/start-nc">{{cms.linkText}}
         </a>
-        to find out how to view and share your result.
+        {{cms.p2}}
       </p>
 
     </div>
