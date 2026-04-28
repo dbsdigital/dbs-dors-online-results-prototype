@@ -1,0 +1,18 @@
+{
+    "en": {
+        "title": "Who are you sharing your online result with?",
+        "p1": "They will see the organisation name you enter here.",
+        "textInputLabel": "Organisation name",
+        "buttonText": "Get share code",
+        "buttonLink": "/applicant-share-3",
+        "backlink": "/applicant-share-1"
+    },
+    "cy": {
+        "title": "Gyda phwy ydych chi'n rhannu eich canlyniad ar-lein?",
+        "p1": "TByddan nhw'n gweld enw'r sefydliad rydych chi'n ei nodi yma.",
+        "textInputLabel": "Enw'r sefydliad",
+        "buttonText": "Cael cod rhannu",
+        "buttonLink": "/applicant-share-3?lang=cy",
+        "backlink": "/applicant-share-1?lang=cy"
+    }
+}

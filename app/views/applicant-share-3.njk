@@ -15,7 +15,7 @@
     data-module="govuk-button"
     style="display: block; margin: 0 auto;"
     onclick="(navigator.clipboard.writeText('8wDsxn72'))">
-    Copy Code
+    {{cms.boxButton}}
   </button>
 </div>
 
@@ -28,10 +28,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
 {% endblock %}
 
@@ -40,40 +48,37 @@
 
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Share your DBS result</h1>
+      <h1 class="govuk-heading-l">{{cms.title}}</h1>
 
       {{ govukNotificationBanner({
   html: html,
-  titleText: 'Share Code'
+  titleText: cms.boxHeading
 }) }}
       <br>
 
-        <p>Your share code is:</p>
+        <p>{{cms.p1}}</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>single use</li>
-          <li>case sensitive</li>
-          <li>only valid for 21 days</li>
+          <li>{{cms.bullet1}}</li>
+          <li>{{cms.bullet2}}</li>
+          <li>{{cms.bullet3}}</li>
         </ul>
 
-        <h3 class="govuk-heading-m">What you need to do now</h3>
-        <p>You need to:</p>
+        <h3 class="govuk-heading-m">{{cms.h1}}</h3>
+        <p>{{cms.p2}}</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>send the email we have just sent you, to the person you want to see your result</li>
-          <li>give the share code to the person you want to see your result</li>
+          <li>{{cms.bullet4}}</li>
+          <li>{{cms.bullet5}}</li>
         </ul>
 
-        <p>You can
-          <a href="/RB_cert_email">request another email</a>
-          if you have not received the email or you cannot find it. For your security you must send the share code separately to
-          the email, for example by text message.</p>
+        <p>{{cms.p6}}<a href="/RB_cert_email">{{cms.linkText}}</a>{{cms.p7}}</p>
 
         {{ govukInsetText({
-                    text: "You can view all the share codes you generate on the ‘Manage Share Codes’ tab. You can also cancel any unused share codes."
+                    text: cms.insetText
                   }) }}
 
         {{ govukButton({
-                  text: "Get another share code",
-                  href: "/applicant-share-2"
+                  text: cms.buttonText,
+                  href: cms.buttonLink
                   }) }}
       </div>
     </div>

@@ -32,45 +32,40 @@
     <div class="govuk-width-container">
 
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l">How to share your DBS result</h1>
-        <p>You can use this part of the service to share your result with someone else, like your employer.</p>
+        <h1 class="govuk-heading-l">{{cms.title}}</h1>
+        <p>{{cms.p1}}</p>
 
-        <h2 class="govuk-heading-m">How this works</h2>
-        <p>
-          You will need to tell us who you want to share your result with, we will then generate a one time
-          share code to allow them to view your result.
-        </p>
-
-        <p>We will also send you an email with:</p>
+        <h2 class="govuk-heading-m">{{cms.h1}}</h2>
+        <p>{{cms.p2}}</p>
+        <p>{{cms.p3}}</p>
 
         <ul class="govuk-list govuk-list--bullet">
-          <li>instructions on how to share your result</li>
-          <li>the last 6 digits of your certificate number</li>
-          <li>a link to access your result</li>
+          <li>{{cms.bullet1}}</li>
+          <li>{{cms.bullet2}}</li>
+          <li>{{cms.bullet3}}</li>
         </ul>
 
         {{ govukInsetText({
-          text: "You will need to send the share code and email to the person you want to view your result."
+          text: cms.insetText1
         }) }}
 
         {{ govukButton({
           isStartButton: true,
-          text: "Share Result",
-          href: "/applicant-share-2"
+          text: cms.buttonText,
+          href: cms.buttonLink
         }) }}
 
-        <h3 class="govuk-heading-s">Receipts for Online Results</h3>
+        <h3 class="govuk-heading-s">{{cms.h2}}</h3>
 
-        <p class="govuk-body">The person you share your Online Result with can also download a receipt to prove they have viewed
-          your result.</p>
-        <p class="govuk-body">The receipt includes:</p>
+        <p class="govuk-body">{{cms.p4}}</p>
+        <p class="govuk-body">{{cms.p5}}</p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>your name</li>
-          <li>your position - for example, teacher</li>
-          <li>your DBS certificate number and date of issue</li>
-          <li>if your check is standard or enhanced and the workforce it is for</li>
-          <li>if any barred lists were checked</li>
-          <li>the date they viewed your online result</li>
+          <li>{{cms.bullet4}}</li>
+          <li>{{cms.bullet5}}</li>
+          <li>{{cms.bullet6}}</li>
+          <li>{{cms.bullet7}}</li>
+          <li>{{cms.bullet8}}</li>
+          <li>{{cms.bullet9}}</li>
         </ul>
 
       </div>

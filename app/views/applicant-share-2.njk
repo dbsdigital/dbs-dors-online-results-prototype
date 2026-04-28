@@ -10,13 +10,21 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
 
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
+
     {{ govukBackLink({
-    href: '/applicant-share-1',
+    href: cms.backlink,
     text: "Back"
   }) }}
 
@@ -28,20 +36,20 @@
     <div class="govuk-grid-column-two-thirds">
 
       <div id="share-result">
-        <h1 class="govuk-heading-l">Who are you sharing your online result with?</h1>
-        <p>They will see the organisation name you enter here.</p>
+        <h1 class="govuk-heading-l">{{cms.title}}</h1>
+        <p>{{cms.p1}}</p>
         <div class="govuk-form-group">
           <div class="govuk-grid-column-two-thirds" style="padding: 0;">
             <label class="govuk-label govuk-label--m" for="event-name">
-              Organisation name
+              {{cms.textInputLabel}}
             </label>
 
             <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
           </div>
 
           {{ govukButton({
-            text: "Get share code",
-            href: "/applicant-share-3",
+            text: cms.buttonText,
+            href: cms.buttonLink,
             classes: "govuk-!-margin-bottom-0"
           }) }}
 

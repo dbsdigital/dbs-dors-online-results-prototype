@@ -10,20 +10,20 @@
 {% block header %}
   {% set navItems = [{
       active: true if pageId == 'view-your-result',
-      href: "/applicant-result",
+      href: commonCms.navBar.tab1Link,
       text: commonCms.navBar.tab1
     },{
       active: true if pageId == 'share-your-result',
-      href: "/applicant-share-1",
+      href: commonCms.navBar.tab2Link,
       text: commonCms.navBar.tab2
     },{
       active: true if pageId == 'manage-share-codes',
-      href: "/applicant-manage-share",
+      href: commonCms.navBar.tab3Link,
       text: commonCms.navBar.tab3
     },
     {
       active: true if pageId == 'contact-dbs',
-      href: "/applicant-contact",
+      href: commonCms.navBar.tab4Link,
       text: commonCms.navBar.tab4
     }] %}
 

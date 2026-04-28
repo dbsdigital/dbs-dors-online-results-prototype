@@ -7,9 +7,13 @@
         "navBar": {
             "serviceText": "Gweld neu rannu eich canlyniad DBS",
             "tab1": "Gweld eich canlyniad",
+            "tab1Link": "/applicant-result?lang=cy",
             "tab2": "Rhannu eich canlyniad",
+            "tab2Link": "/applicant-share-1?lang=cy",
             "tab3": "Rheoli codau rhannu",
+            "tab3Link": "/applicant-manage-share?lang=cy",
             "tab4": "Cysylltu â DBS",
+            "tab4Link": "/applicant-contact?lang=cy",
             "signOut": "Allgofnodi"
         }
     },
@@ -21,9 +25,13 @@
         "navBar": {
             "serviceText": "View or share your DBS result",
             "tab1": "View your result",
+            "tab1Link": "/applicant-result",
             "tab2": "Share your result",
+            "tab2Link": "/applicant-share-1",
             "tab3": "Manage share codes",
+            "tab3Link": "/applicant-manage-share",
             "tab4": "Contact DBS",
+            "tab4Link": "/applicant-contact",
             "signOut": "Sign out"
         }
     }

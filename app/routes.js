@@ -11,6 +11,11 @@ const stage2Text = require('./cms/progress_tracker/stage-2.json');
 const stage5Option1Text = require('./cms/progress_tracker/stage-5-option-1.json');
 const stage5Option2Text = require('./cms/progress_tracker/stage-5-option-2.json');
 const applicantResultText = require('./cms/applicant-result.json');
+const applicantShare1Text = require('./cms/applicant-share1.json');
+const applicantShare2Text = require('./cms/applicant-share2.json');
+const applicantShare3Text = require('./cms/applicant-share3.json');
+const applicantManageShareText = require('./cms/applicant-manage-share.json');
+const applicantContact = require('./cms/applicant-contact.json');
 
 router.get("*", (req, res, next) => {
   res.locals.language = req.query?.lang || 'en';
@@ -174,6 +179,35 @@ router.get("/applicant-result", (req, res) => {
 
 router.get("/applicant-share-1", (req, res) => {
   res.render("applicant-share-1", {
+    cms: applicantShare1Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-share-2", (req, res) => {
+  res.render("applicant-share-2", {
+    cms: applicantShare2Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-share-3", (req, res) => {
+  res.render("applicant-share-3", {
+    cms: applicantShare3Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-manage-share", (req, res) => {
+  res.render("applicant-manage-share", {
+    cms: applicantManageShareText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-contact", (req, res) => {
+  res.render("applicant-contact", {
+    cms: applicantContact[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
 })
