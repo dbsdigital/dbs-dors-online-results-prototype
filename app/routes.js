@@ -16,6 +16,10 @@ const applicantShare2Text = require('./cms/applicant-share2.json');
 const applicantShare3Text = require('./cms/applicant-share3.json');
 const applicantManageShareText = require('./cms/applicant-manage-share.json');
 const applicantContact = require('./cms/applicant-contact.json');
+const employerViewCheckText = require('./cms/employer/employer-view-check.json');
+const employerEnterCertText = require('./cms/employer/employer-enter-cert.json');
+const employerResultText = require('./cms/employer/employer-result.json');
+const employViewCompleteText = require('./cms/employer/employer-view-complete.json');
 
 router.get("*", (req, res, next) => {
   res.locals.language = req.query?.lang || 'en';
@@ -502,9 +506,33 @@ router.post("/sign_in", (req, res, _next) => {
 });
 
 //employer enter cert num
-router.get("/employer_enter_cert", (req, res, _next) => {
-  res.render("employer_enter_cert");
+router.get("/employer/employer_enter_cert", (req, res) => {
+  res.render("employer/employer_enter_cert", {
+    cms: employerEnterCertText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
 });
+
+router.get("/employer/employer_view_check", (req, res) => {
+  res.render("employer/employer_view_check", {
+    cms: employerViewCheckText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/employer/employer_view_cert", (req, res) => {
+  res.render("employer/employer_view_cert", {
+    cms: employerResultText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/employer/employer_view_complete", (req, res) => {
+  res.render("employer/employer_view_complete", {
+    cms: employViewCompleteText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
 
 // Clear all data in session if you open /prototype-admin/clear-data
 router.post("/prototype-admin/clear-data", function (req, res) {

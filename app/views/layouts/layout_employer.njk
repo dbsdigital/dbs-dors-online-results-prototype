@@ -12,7 +12,7 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
     homepageUrl: "/start"
   }) }}
   {{ govukServiceNavigation({
-    serviceName: "View someone's DBS result",
+    serviceName: 'Gweld canlyniad DBS rhywun' if data['lang'] === 'cy' else 'View someone’s DBS result',
     serviceUrl: "/start"
   }) }}
 {% endblock %}

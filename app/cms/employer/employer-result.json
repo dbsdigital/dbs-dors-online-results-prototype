@@ -41,7 +41,8 @@
             "insetP1": "You can ",
             "insetLinkText": "contact DBS",
             "insetP2": " if you need to report a mistake or dispute the result.",
-            "shareButton": "Share Result"
+            "finishButton": "Finish and get receipt",
+            "finishButtonLink": "/employer/employer_view_complete?lang=en"
         },
         "disclaimer": {
             "label": "Disclaimer",
@@ -82,7 +83,7 @@
             "p17": "Sometimes a dispute can only be resolved using fingerprints. The applicant's consent is required for this.",
             "p18": "If DBS upholds the dispute DBS will issue a new DBS online result free-of-charge. For details of the DBS disputes and complaints procedures please visit ",
             "linkText2": "the DBS page (opens in a new tab)",
-            "p19": "on gov.uk."
+            "p19": " on gov.uk."
         }
     },
     "cy": {
@@ -127,7 +128,8 @@
             "insetP1": "Gallwch ",
             "insetLinkText": "gysylltu â DBS",
             "insetP2": " os oes angen i chi roi gwybod am gamgymeriad neu anghytuno â'r canlyniad.",
-            "shareButton": "Rhannu Canlyniad"
+            "finishButton": "Gorffen a chael derbynneb",
+            "finishButtonLink": "/employer/employer_view_complete?lang=cy"
         },
         "disclaimer": {
             "label": "Ymwadiad",

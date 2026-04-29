@@ -8,10 +8,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
 {% endblock %}
 
@@ -22,32 +30,34 @@
       {% from "govuk/components/notification-banner/macro.njk" import govukNotificationBanner %}
 
       {{ govukPanel({
-        titleText: "DBS online result viewed",
-        html: "Certificate reference number<br><strong>XXXXXX176560</strong>"
+        titleText: cms.boxTitle,
+        html: cms.boxText + "<br><strong>XXXXXX176560</strong>"
       }) }}
       <p>
-        We have told the applicant you have viewed their result.
+        {{cms.p1}}
       </p>
-      <p>If you need to view the result again you will need a new share code from the applicant.</p>
+      <p>{{cms.p2}}</p>
 
       <p class="govuk-body">
-        <a href="/public/pdfs/176560-result-receipt.pdf" download="176560-result-receipt.pdf">Download a PDF receipt as proof
-          you have viewed this Online Result (opens in a new tab)</a>
+        <a href="/public/pdfs/176560-result-receipt.pdf" download="176560-result-receipt.pdf">
+          {{cms.linkText1}}
+        </a>
       </p>
 
-      <h2 class="govuk-heading-m">Give feedback</h2>
+      <h2 class="govuk-heading-m">{{cms.h1}}</h2>
       <p>
-        Please
-        <a class="govuk-link" href="https://give-feedback-dbs.service.gov.uk/#/en/e-result" target="_blank">use our feedback
-          form</a>
-        to tell us what you think of our service.
+        {{cms.p3}}
+        <a class="govuk-link" href="https://give-feedback-dbs.service.gov.uk/#/en/e-result" target="_blank">
+          {{cms.linkText2}}
+        </a>
+        {{cms.p4}}
       </p>
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-        text: "Finish",
-        href: "/employer/employer_view_check"
+        text: cms.buttonText,
+        href: cms.buttonLink
       }) }}
     </div>
   </div>
