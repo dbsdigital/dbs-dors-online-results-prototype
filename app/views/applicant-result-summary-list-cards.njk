@@ -32,15 +32,15 @@
 
     <div class="govuk-width-container">
 
-      {% include "result_partial.njk" %}
+      {% include "result_partial_summary_list_cards.njk" %}
 
-      <a href={{cms.certificate.shareButtonLink}} class="govuk-button">
-        {{cms.certificate.shareButton}}
+      <a href="/applicant-share-1" class="govuk-button">
+        Share Result
       </a>
 
       {{ govukInsetText({
-          html: "<p>" + cms.certificate.insetP1 + "<a href='/applicant-contact'>" + cms.certificate.insetLinkText + "</a>" + cms.certificate.insetP2 + "</p>"
-      }) }}
+                  html: "<p>You can <a href='/applicant-contact'>contact DBS</a> if you need to report a mistake or dispute the result.</p>"
+                }) }}
 
       {{ govukDetails({
           summaryText: cms.disclaimer.label,

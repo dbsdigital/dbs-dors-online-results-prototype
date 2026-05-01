@@ -1,0 +1,164 @@
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+<img src="/public/images/Disclosure_and_Barring_Service_Logo.svg" class="dbs-logo">
+
+<div
+  class="govuk-notification-banner govuk-notification-banner--success"
+  role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      {{cms.certificate.resultBoxLabel}}
+    </h2>
+  </div>
+
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading" id="banner-content">
+      {{cms.certificate.resultBoxHeading}}
+    </p>
+    <p>{{cms.certificate.resultBoxP1}}
+      <strong>{{cms.certificate.resultBoxDate}}</strong>
+    </p>
+    <p>
+      <strong>{{cms.certificate.resultBoxP2}}</strong>
+    </p>
+  </div>
+</div>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key1
+      },
+      value: {
+        text: cms.certificate.value1
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key2
+      },
+      value: {
+        text: cms.certificate.value2
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">{{cms.certificate.tableHeading1}}</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key3
+      },
+      value: {
+        text: cms.certificate.value3
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key4
+      },
+      value: {
+        text: cms.certificate.value4
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key5
+      },
+      value: {
+        text: cms.certificate.value5
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key6
+      },
+      value: {
+        text: cms.certificate.value6
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key7
+      },
+      value: {
+        text: cms.certificate.value7
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key8
+      },
+      value: {
+        text: cms.certificate.value8
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">{{cms.certificate.tableHeading2}}</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key9
+      },
+      value: {
+        html: "<p>" + cms.certificate.value9a + "<br/>" + cms.certificate.value9b + "</p>"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key10
+      },
+      value: {
+        text: cms.certificate.value10
+      }
+    }
+  ]
+}) }}
+
+<h2 class="govuk-heading-m">{{cms.certificate.tableHeading3}}</h2>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key11
+      },
+      value: {
+        text: cms.certificate.value11
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key12
+      },
+      value: {
+        text: cms.certificate.value12
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key13
+      },
+      value: {
+        text: cms.certificate.value13
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key14
+      },
+      value: {
+        text: cms.certificate.value14
+      }
+    }
+  ]
+}) }}

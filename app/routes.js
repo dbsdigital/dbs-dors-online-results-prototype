@@ -11,6 +11,7 @@ const stage2Text = require('./cms/progress_tracker/stage-2.json');
 const stage5Option1Text = require('./cms/progress_tracker/stage-5-option-1.json');
 const stage5Option2Text = require('./cms/progress_tracker/stage-5-option-2.json');
 const applicantResultText = require('./cms/applicant-result.json');
+const applicantResultNotClearText = require('./cms/applicant-result-not-clear.json');
 const applicantShare1Text = require('./cms/applicant-share1.json');
 const applicantShare2Text = require('./cms/applicant-share2.json');
 const applicantShare3Text = require('./cms/applicant-share3.json');
@@ -181,43 +182,74 @@ router.get("/applicant-result", (req, res) => {
   }
 });
 
+router.get("/applicant-result-same-table-line", (req, res) => {
+  res.render("applicant-result-same-table-line", {
+    cms: applicantResultText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/applicant-result-one-value-per-row", (req, res) => {
+  res.render("applicant-result-one-value-per-row", {
+    cms: applicantResultText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/applicant-result-summary-list", (req, res) => {
+  res.render("applicant-result-summary-list", {
+    cms: applicantResultText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/applicant-result-summary-list-cards", (req, res) => {
+  res.render("applicant-result-summary-list-cards", {
+    cms: applicantResultText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
 router.get("/applicant-share-1", (req, res) => {
   res.render("applicant-share-1", {
     cms: applicantShare1Text[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
-})
+});
 
 router.get("/applicant-share-2", (req, res) => {
   res.render("applicant-share-2", {
     cms: applicantShare2Text[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
-})
+});
 
 router.get("/applicant-share-3", (req, res) => {
   res.render("applicant-share-3", {
     cms: applicantShare3Text[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
-})
+});
 
 router.get("/applicant-manage-share", (req, res) => {
   res.render("applicant-manage-share", {
     cms: applicantManageShareText[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
-})
+});
 
 router.get("/applicant-contact", (req, res) => {
   res.render("applicant-contact", {
     cms: applicantContact[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
-})
+});
 
 router.get("/applicant-result-nc", (req, res) => {
-  res.render("applicant-result-not-clear");
+  res.render("applicant-result-not-clear", {
+    cms: applicantResultNotClearText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  });
 });
 
 // One Login
@@ -246,9 +278,11 @@ router.get("/sign_in_verify", (req, res, _next) => {
 
 router.get("/sign_in_otp", (req, res, _next) => {
   let backButton = "/sign_in_verify";
+  console.log(res.locals.language);
   res.render("one_login/sign_in_otp", {
     backButton: backButton,
     password: req.session?.selectedCertificate?.signInPassword || "",
+    lang: res.locals.language,
     validation: null,
   });
 });

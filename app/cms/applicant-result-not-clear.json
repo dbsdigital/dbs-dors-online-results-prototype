@@ -1,0 +1,16 @@
+{
+    "en": {
+        "title": "We have sent your DBS result in the post",
+        "p1": "It will be delivered to the address you gave us in your application. It should arrive within 7 working days. You can share this printed result with someone else, like your employer.",
+        "p2": "We cannot display the result of your DBS check online.",
+        "buttonText": "Finish",
+        "buttonLink": "/start?lang=en"
+    },
+    "cy": {
+        "title": "Rydym wedi anfon eich canlyniad DBS yn y post",
+        "p1": "Bydd yn cael ei ddanfon i'r cyfeiriad a roddoch i ni yn eich cais. Dylai gyrraedd o fewn 7 diwrnod gwaith. Gallwch rannu'r canlyniad printiedig hwn gyda rhywun arall, fel eich cyflogwr.",
+        "p2": "Ni allwn arddangos canlyniad eich gwiriad DBS ar-lein.",
+        "buttonText": "Gorffen",
+        "buttonLink": "/start?lang=cy"
+    }
+}

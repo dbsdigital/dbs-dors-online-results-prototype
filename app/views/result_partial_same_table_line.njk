@@ -1,0 +1,197 @@
+{% from "govuk/components/table/macro.njk" import govukTable %}
+<img src="/public/images/Disclosure_and_Barring_Service_Logo.svg" class="dbs-logo">
+
+<div
+  class="govuk-notification-banner govuk-notification-banner--success"
+  role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      {{cms.certificate.resultBoxLabel}}
+    </h2>
+  </div>
+
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading" id="banner-content">
+      {{cms.certificate.resultBoxHeading}}
+    </p>
+    <p>{{cms.certificate.resultBoxP1}}
+      <strong>{{cms.certificate.resultBoxDate}}</strong>
+    </p>
+    <p>
+      <strong>{{cms.certificate.resultBoxP2}}</strong>
+    </p>
+  </div>
+</div>
+
+{{ govukTable({
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: cms.certificate.key1,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value1,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key2,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value2,
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
+
+{{ govukTable({
+  caption: cms.certificate.tableHeading1,
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: cms.certificate.key3,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value3,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key4,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value4,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key5,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value5,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key6,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value6,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key7,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value7,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key8,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value8,
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
+
+{{ govukTable({
+  caption: cms.certificate.tableHeading2,
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: cms.certificate.key9,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        html: "<p>" + cms.certificate.value9a + "<br/>" + cms.certificate.value9b + "</p>",
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key10,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value10,
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}
+
+{{ govukTable({
+  caption: cms.certificate.tableHeading3,
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: true,
+  rows: [
+    [
+      {
+        text: cms.certificate.key11,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value11,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key12,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value12,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key13,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value13,
+        classes: "govuk-!-width-one-half"
+      }
+    ],
+    [
+      {
+        text: cms.certificate.key14,
+        classes: "govuk-!-width-one-half"
+      },
+      {
+        text: cms.certificate.value14,
+        classes: "govuk-!-width-one-half"
+      }
+    ]
+  ]
+}) }}

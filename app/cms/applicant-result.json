@@ -41,7 +41,8 @@
             "insetP1": "You can ",
             "insetLinkText": "contact DBS",
             "insetP2": " if you need to report a mistake or dispute the result.",
-            "shareButton": "Share Result"
+            "shareButton": "Share Result",
+            "shareButtonLink": "/applicant-share-1?lang=en"
         },
         "disclaimer": {
             "label": "Disclaimer",
@@ -127,7 +128,8 @@
             "insetP1": "Gallwch ",
             "insetLinkText": "gysylltu â DBS",
             "insetP2": " os oes angen i chi roi gwybod am gamgymeriad neu anghytuno â'r canlyniad.",
-            "shareButton": "Rhannu Canlyniad"
+            "shareButton": "Rhannu Canlyniad",
+            "shareButtonLink": "/applicant-share-1?lang=cy"
         },
         "disclaimer": {
             "label": "Ymwadiad",

@@ -241,7 +241,109 @@
 
 
           }) }}
-      <p>Archived Journeys.</p>
+      <h2 class="govuk-heading-s">Experimental Journeys.</h2>
+        {{ govukTable({
+            firstCellIsHeader: false,
+            head: [
+            {
+              text: "Journey"
+              },
+              {
+                text: "Actions"
+              },
+              {
+                text: "Description"
+              }
+            ],
+            rows: [
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result - Same Table Line"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant-result-same-table-line?lang=en"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant-result-same-table-line?lang=en\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The same journey as the applicant result except the tables are formatted to have the key and value on the same line."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result - One Value Per Row"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant-result-one-value-per-row?lang=en"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant-result-one-value-per-row?lang=en\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The same journey as the applicant result except the tables are formatted to have a single value per row"
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result - Summary List"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant-result-summary-list?lang=en"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant-result-summary-list?lang=en\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The same journey as the applicant result except the tables are replaced by summary lists"
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result - Summary List Cards"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant-result-summary-list-cards?lang=en"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant-result-summary-list-cards?lang=en\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The same journey as the applicant result except the tables are replaced by summary lists and grouped within cards"
+                  }
+              ]
+              ]
+
+      }) }}
+      <h2 class="govuk-heading-s">Archived Journeys.</h2>
       {{ govukTable({
             firstCellIsHeader: false,
             head: [
@@ -268,7 +370,7 @@
                     text: "Start",
                     href: "/applicant/title"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant/title\")'>
                         Copy Link
                       </button>"
                 },
@@ -289,7 +391,7 @@
                     text: "Start",
                     href: "/start/title"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/start\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/start/title\")'>
                         Copy Link
                       </button>"
                 },
@@ -302,7 +404,7 @@
               ]
 
 
-          }) }}
+      }) }}
 
     </div>
   </div>
