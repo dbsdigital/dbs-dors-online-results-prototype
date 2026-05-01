@@ -62,7 +62,7 @@
 
         {{ govukButton({
           text: "Continue",
-          href: "/applicant-result"
+          href: "/applicant-result?lang=cy" if lang === "cy" else "/applicant-result?lang=en"
         }) }}
 
       </div>

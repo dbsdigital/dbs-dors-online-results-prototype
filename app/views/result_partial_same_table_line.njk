@@ -8,19 +8,19 @@
   data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__header">
     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      DBS Check Result
+      {{cms.certificate.resultBoxLabel}}
     </h2>
   </div>
 
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading" id="banner-content">
-      This Enhanced DBS Check is clear
+      {{cms.certificate.resultBoxHeading}}
     </p>
-    <p>This Enhanced DBS Check was issued on
-      <strong>08/12/2022.</strong>
+    <p>{{cms.certificate.resultBoxP1}}
+      <strong>{{cms.certificate.resultBoxDate}}</strong>
     </p>
     <p>
-      <strong>It is only valid when viewed online. It is not valid if printed.</strong>
+      <strong>{{cms.certificate.resultBoxP2}}</strong>
     </p>
   </div>
 </div>
@@ -31,21 +31,21 @@
   rows: [
     [
       {
-        text: "Certificate Number",
+        text: cms.certificate.key1,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "001122334455",
+        text: cms.certificate.value1,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Application Number",
+        text: cms.certificate.key2,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "E0123456789",
+        text: cms.certificate.value2,
         classes: "govuk-!-width-one-half"
       }
     ]
@@ -53,67 +53,67 @@
 }) }}
 
 {{ govukTable({
-  caption: "Applicant Details",
+  caption: cms.certificate.tableHeading1,
   captionClasses: "govuk-table__caption--m",
   firstCellIsHeader: true,
   rows: [
     [
       {
-        text: "Name",
+        text: cms.certificate.key3,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "Bill Carr",
+        text: cms.certificate.value3,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Other/Previous Names",
+        text: cms.certificate.key4,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "None Declared",
+        text: cms.certificate.value4,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Date of Birth",
+        text: cms.certificate.key5,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "02 April 1955",
+        text: cms.certificate.value5,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Place of Birth",
+        text: cms.certificate.key6,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "Ipswich",
+        text: cms.certificate.value6,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Address",
+        text: cms.certificate.key7,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "10 King Road, IP24 1QR",
+        text: cms.certificate.value7,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Sex",
+        text: cms.certificate.key8,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "Male",
+        text: cms.certificate.value8,
         classes: "govuk-!-width-one-half"
       }
     ]
@@ -121,27 +121,27 @@
 }) }}
 
 {{ govukTable({
-  caption: "Position Details",
+  caption: cms.certificate.tableHeading2,
   captionClasses: "govuk-table__caption--m",
   firstCellIsHeader: true,
   rows: [
     [
       {
-        text: "Post Applied For",
+        text: cms.certificate.key9,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "Traffic Flow Administrator DBS Fee Charged",
+        html: "<p>" + cms.certificate.value9a + "<br/>" + cms.certificate.value9b + "</p>",
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Workforce Type",
+        text: cms.certificate.key10,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "Child and Adult",
+        text: cms.certificate.value10,
         classes: "govuk-!-width-one-half"
       }
     ]
@@ -149,47 +149,47 @@
 }) }}
 
 {{ govukTable({
-  caption: "Recorded Details",
+  caption: cms.certificate.tableHeading3,
   captionClasses: "govuk-table__caption--m",
   firstCellIsHeader: true,
   rows: [
     [
       {
-        text: "Police records of convictions and cautions",
+        text: cms.certificate.key11,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "None Recorded",
+        text: cms.certificate.value11,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "DBS Children's Barred List information",
+        text: cms.certificate.key12,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "None Recorded",
+        text: cms.certificate.value12,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "DBS Adults' Barred List information",
+        text: cms.certificate.key13,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "None Recorded",
+        text: cms.certificate.value13,
         classes: "govuk-!-width-one-half"
       }
     ],
     [
       {
-        text: "Other relevant information disclosed at the Chief Police Officer(s) discretion",
+        text: cms.certificate.key14,
         classes: "govuk-!-width-one-half"
       },
       {
-        text: "None Recorded",
+        text: cms.certificate.value14,
         classes: "govuk-!-width-one-half"
       }
     ]

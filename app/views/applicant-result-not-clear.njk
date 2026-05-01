@@ -30,10 +30,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
 {% endblock %}
 
@@ -41,18 +49,14 @@
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">We have sent your DBS result in the post</h1>
-      <p>
-        It will be delivered to the address you gave us in your application. 
-        It should arrive within 7 working days. You can share this printed result with someone else, 
-        like your employer.
-      </p>
+      <h1 class="govuk-heading-l">{{cms.title}}</h1>
+      <p>{{cms.p1}}</p>
 
-      <p>We cannot display the result of your DBS check online.</p>
+      <p>{{cms.p2}}</p>
 
       {{ govukButton({
-        text: "Finish",
-        href: "/start"
+        text: cms.buttonText,
+        href: cms.buttonLink
       }) }}
     </div>
 

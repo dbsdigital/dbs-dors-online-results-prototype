@@ -8,19 +8,19 @@
   data-module="govuk-notification-banner">
   <div class="govuk-notification-banner__header">
     <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      DBS Check Result
+      {{cms.certificate.resultBoxLabel}}
     </h2>
   </div>
 
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading" id="banner-content">
-      This Enhanced DBS Check is clear
+      {{cms.certificate.resultBoxHeading}}
     </p>
-    <p>This Enhanced DBS Check was issued on
-      <strong>08/12/2022.</strong>
+    <p>{{cms.certificate.resultBoxP1}}
+      <strong>{{cms.certificate.resultBoxDate}}</strong>
     </p>
     <p>
-      <strong>It is only valid when viewed online. It is not valid if printed.</strong>
+      <strong>{{cms.certificate.resultBoxP2}}</strong>
     </p>
   </div>
 </div>
@@ -29,18 +29,18 @@
   rows: [
     {
       key: {
-        text: "Certificate Number"
+        text: cms.certificate.key1
       },
       value: {
-        text: "001122334455"
+        text: cms.certificate.value1
       }
     },
     {
       key: {
-        text: "Application Number"
+        text: cms.certificate.key2
       },
       value: {
-        text: "E0123456789"
+        text: cms.certificate.value2
       }
     }
   ]
@@ -49,45 +49,45 @@
 {{ govukSummaryList({
   card: {
     title: {
-      text: "Applicant Details"
+      text: cms.certificate.tableHeading1
     }
   },
   rows: [
     {
       key: {
-        text: "Name"
+        text: cms.certificate.key3
       },
       value: {
-        text: "Bill Carr"
+        text: cms.certificate.value3
       }
     },
     {
       key: {
-        text: "Other/Previous Names"
+        text: cms.certificate.key4
       },
       value: {
-        text: "	None Declared"
+        text: cms.certificate.value4
       }
     },
     {
       key: {
-        text: "Date of Birth"
+        text: cms.certificate.key5
       },
       value: {
-        text: "02 April 1955"
+        text: cms.certificate.value5
       }
     },
     {
       key: {
-        text: "Place of Birth"
+        text: cms.certificate.key6
       },
       value: {
-        text: "Ipswich"
+        text: cms.certificate.value6
       }
     },
     {
       key: {
-        text: "Address"
+        text: cms.certificate.key7
       },
       value: {
         html: "<p>10 King Road<br/>Norfolk<br/>IP24 1QR</p>"
@@ -95,10 +95,10 @@
     },
     {
       key: {
-        text: "Sex"
+        text: cms.certificate.key8
       },
       value: {
-        text: "Male"
+        text: cms.certificate.value8
       }
     }
   ]
@@ -107,24 +107,24 @@
 {{ govukSummaryList({
   card: {
     title: {
-      text: "Position Details"
+      text: cms.certificate.tableHeading2
     }
   },
   rows: [
     {
       key: {
-        text: "Post Applied For"
+        text: cms.certificate.key9
       },
       value: {
-        html: "<p>Traffic Flow Administrator<br/>DBS Fee Charged<p>"
+        html: "<p>" + cms.certificate.value9a + "<br/>" + cms.certificate.value9b + "</p>"
       }
     },
     {
       key: {
-        text: "Workforce Type"
+        text: cms.certificate.key10
       },
       value: {
-        text: "Child and Adult"
+        text: cms.certificate.value10
       }
     }
   ]
@@ -133,13 +133,13 @@
 {{ govukSummaryList({
   card: {
     title: {
-      text: "Recorded Details"
+      text: cms.certificate.tableHeading3
     }
   },
   rows: [
     {
       key: {
-        text: "Police records of convictions and cautions"
+        text: cms.certificate.key11
       },
       value: {
         html: '<table class="govuk-table">
@@ -205,26 +205,26 @@
     },
     {
       key: {
-        text: "DBS Children's Barred List information"
+        text: cms.certificate.key12
       },
       value: {
-        text: "None Recorded"
+        text: cms.certificate.value12
       }
     },
     {
       key: {
-        text: "DBS Adults' Barred List information"
+        text: cms.certificate.key13
       },
       value: {
-        text: "None Recorded"
+        text: cms.certificate.value13
       }
     },
     {
       key: {
-        text: "Other relevant information disclosed at the Chief Police Officer(s) discretion"
+        text: cms.certificate.key14
       },
       value: {
-        text: "None Recorded"
+        text: cms.certificate.value14
       }
     }
   ]
