@@ -5,27 +5,35 @@
 {% endblock %}
 
 {% block beforeContent %}
-
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
+
 {% endblock %}
 
 {% block content %}
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-xl">Enter the applicant’s details</h1>
+      <h1 class="govuk-heading-xl">{{cms.title}}</h1>
 
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-            Certificate number
+            {{cms.h1}}
           </legend>
           <p style="color: #4E4E4E">
-            Enter the last 6 digits of the applicant’s certificate number.
+            {{cms.label1}}
           </p>
           <div class="govuk-form-group">
             <input class="govuk-input govuk-input--width-20" id="dbs-certificate-nr" name="dbs-certificate-nr" type="text"/>
@@ -36,10 +44,10 @@
             <br>
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  Share code
+                  {{cms.h2}}
                 </legend>
                 <p style="color: #4E4E4E">
-                  Share codes are 8 characters long and case sensitive for example, gH345hbN
+                  {{cms.label2}}
                 </p>
                 <div class="govuk-form-group">
                   <input class="govuk-input govuk-input--width-20" id="dbs_share_code" name="dbs-certificate-nr" type="text"/>
@@ -49,8 +57,8 @@
             {% from "govuk/components/button/macro.njk" import govukButton %}
 
             {{ govukButton({
-  text: "Continue",
-  href: "/employer/employer_view_cert"
+  text: cms.buttonText,
+  href: cms.buttonLink
 }) }}
 
           </div>

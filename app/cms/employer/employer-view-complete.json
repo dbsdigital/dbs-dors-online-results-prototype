@@ -1,0 +1,28 @@
+{
+    "en": {
+        "boxTitle": "DBS online result viewed",
+        "boxText": "Certificate reference number",
+        "p1": "We have told the applicant you have viewed their result.",
+        "p2": "If you need to view the result again you will need a new share code from the applicant.",
+        "linkText1": "Download a PDF receipt as proof you have viewed this Online Result (opens in a new tab)",
+        "h1": "Give feedback",
+        "p3": "Please ",
+        "linkText2": "use our feedback form",
+        "p4": " to tell us what you think of our service.",
+        "buttonText": "Finish",
+        "buttonLink": "/employer/employer_view_check?lang=en"
+    },
+    "cy": {
+        "boxTitle": "Gwelwyd canlyniad ar-lein DBS",
+        "boxText": "Cyfeirnod y dystysgrif",
+        "p1": "Rydym wedi dweud wrth yr ymgeisydd eich bod wedi gweld eu canlyniad.",
+        "p2": "Os oes angen i chi weld y canlyniad eto bydd angen i chi gael cod rhannu newydd gan yr ymgeisydd.",
+        "linkText1": "Lawrlwythwch dderbynneb PDF fel prawf eich bod wedi gweld y Canlyniad Ar-lein hwn (yn agor mewn tab newydd)",
+        "h1": "Rhoi adborth",
+        "p3": "Os gwelwch yn dda ",
+        "linkText2": "defnyddio ein ffurflen adborth",
+        "p4": " i ddweud wrthym beth yw eich barn am ein gwasanaeth.",
+        "buttonText": "Gorffen",
+        "buttonLink": "/employer/employer_view_check?lang=cy"
+    }
+}

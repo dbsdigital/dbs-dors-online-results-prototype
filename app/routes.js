@@ -6,6 +6,25 @@
 const govukPrototypeKit = require("govuk-prototype-kit");
 const { get } = require("jquery");
 const router = govukPrototypeKit.requests.setupRouter();
+const commonCms = require('./cms/common.json');
+const stage2Text = require('./cms/progress_tracker/stage-2.json');
+const stage5Option1Text = require('./cms/progress_tracker/stage-5-option-1.json');
+const stage5Option2Text = require('./cms/progress_tracker/stage-5-option-2.json');
+const applicantResultText = require('./cms/applicant-result.json');
+const applicantShare1Text = require('./cms/applicant-share1.json');
+const applicantShare2Text = require('./cms/applicant-share2.json');
+const applicantShare3Text = require('./cms/applicant-share3.json');
+const applicantManageShareText = require('./cms/applicant-manage-share.json');
+const applicantContact = require('./cms/applicant-contact.json');
+const employerViewCheckText = require('./cms/employer/employer-view-check.json');
+const employerEnterCertText = require('./cms/employer/employer-enter-cert.json');
+const employerResultText = require('./cms/employer/employer-result.json');
+const employViewCompleteText = require('./cms/employer/employer-view-complete.json');
+
+router.get("*", (req, res, next) => {
+  res.locals.language = req.query?.lang || 'en';
+  next();
+})
 
 router.get("/progress_tracker/stage2", function (req, res) {
   const today = new Date();
@@ -32,6 +51,8 @@ router.get("/progress_tracker/stage2", function (req, res) {
   res.render("progress_tracker/stage2", {
     currentDate: formattedDate,
     formattedDateOneWeekAgo,
+    cms: stage2Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
   });
 });
 
@@ -73,6 +94,8 @@ router.get("/progress_tracker/stage5_option1", function (req, res) {
     formattedDateSixDaysAgo,
     formattedDateFiveDaysAgo,
     formattedDateTwoDaysAgo,
+    cms: stage5Option1Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
   });
 });
 
@@ -100,6 +123,8 @@ router.get("/progress_tracker/stage5_option2", function (req, res) {
   res.render("progress_tracker/stage5_option2", {
     currentDate: formattedDate,
     formattedDateOneWeekAgo,
+    cms: stage5Option2Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
   });
 });
 
@@ -144,11 +169,52 @@ router.get("/start-nc", (req, res) => {
 
 router.get("/applicant-result", (req, res) => {
   if (req.session?.nc === true) {
-    res.render("applicant-result-not-clear");
+    res.render("applicant-result-not-clear", {
+      cms: applicantResultText[res.locals.language],
+      commonCms: commonCms[res.locals.language]
+    });
   } else {
-    res.render("applicant-result");
+    res.render("applicant-result", {
+      cms: applicantResultText[res.locals.language],
+      commonCms: commonCms[res.locals.language]
+    });
   }
 });
+
+router.get("/applicant-share-1", (req, res) => {
+  res.render("applicant-share-1", {
+    cms: applicantShare1Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-share-2", (req, res) => {
+  res.render("applicant-share-2", {
+    cms: applicantShare2Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-share-3", (req, res) => {
+  res.render("applicant-share-3", {
+    cms: applicantShare3Text[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-manage-share", (req, res) => {
+  res.render("applicant-manage-share", {
+    cms: applicantManageShareText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
+
+router.get("/applicant-contact", (req, res) => {
+  res.render("applicant-contact", {
+    cms: applicantContact[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
 
 router.get("/applicant-result-nc", (req, res) => {
   res.render("applicant-result-not-clear");
@@ -377,7 +443,7 @@ router.get("/results_certificate", (req, res, _next) => {
   let result = "revelant information";
   if (
     policeRecordsOfConvictions[0].date_conviction ==
-      "None recorded - Not applicable" &&
+    "None recorded - Not applicable" &&
     infoSection142Education == "None recorded" &&
     dbsChildrenBarList == "None recorded" &&
     dbsAdultBarList == "None recorded" &&
@@ -440,9 +506,33 @@ router.post("/sign_in", (req, res, _next) => {
 });
 
 //employer enter cert num
-router.get("/employer_enter_cert", (req, res, _next) => {
-  res.render("employer_enter_cert");
+router.get("/employer/employer_enter_cert", (req, res) => {
+  res.render("employer/employer_enter_cert", {
+    cms: employerEnterCertText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
 });
+
+router.get("/employer/employer_view_check", (req, res) => {
+  res.render("employer/employer_view_check", {
+    cms: employerViewCheckText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/employer/employer_view_cert", (req, res) => {
+  res.render("employer/employer_view_cert", {
+    cms: employerResultText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/employer/employer_view_complete", (req, res) => {
+  res.render("employer/employer_view_complete", {
+    cms: employViewCompleteText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+})
 
 // Clear all data in session if you open /prototype-admin/clear-data
 router.post("/prototype-admin/clear-data", function (req, res) {

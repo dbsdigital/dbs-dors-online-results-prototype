@@ -10,32 +10,32 @@
 {% block header %}
   {% set navItems = [{
       active: true if pageId == 'view-your-result',
-      href: "/applicant-result",
-      text: "View your result"
+      href: commonCms.navBar.tab1Link,
+      text: commonCms.navBar.tab1
     },{
       active: true if pageId == 'share-your-result',
-      href: "/applicant-share-1",
-      text: "Share your result"
+      href: commonCms.navBar.tab2Link,
+      text: commonCms.navBar.tab2
     },{
       active: true if pageId == 'manage-share-codes',
-      href: "/applicant-manage-share",
-      text: "Manage share codes"
+      href: commonCms.navBar.tab3Link,
+      text: commonCms.navBar.tab3
     },
     {
       active: true if pageId == 'contact-dbs',
-      href: "/applicant-contact",
-      text: "Contact DBS"
+      href: commonCms.navBar.tab4Link,
+      text: commonCms.navBar.tab4
     }] %}
 
   {{ govukOneLoginServiceHeader({
     rebrand: true,
     serviceNavigationParams:
     {
-      serviceName: "View or share your DBS result",
+      serviceName: commonCms.navBar.serviceText,
       navigation: navItems
     },
     signOutLink: "/sign-out",
-    signOutText: "Sign out",
+    signOutText: commonCms.navBar.signOut,
     oneLoginLink: "#"
   }) }}
 {% endblock %}

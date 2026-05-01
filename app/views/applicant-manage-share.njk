@@ -9,10 +9,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
 {% endblock %}
 
@@ -21,15 +29,15 @@
 
     <div class="govuk-width-container">
 
-      <h2 class="govuk-heading-l">Manage Share Codes</h2>
+      <h2 class="govuk-heading-l">{{cms.title}}</h2>
       <table class="govuk-table">
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Shared with
+            <th scope="col" class="govuk-table__header">{{cms.tableHeading1}}
             </th>
-            <th scope="col" class="govuk-table__header">Code</th>
-            <th scope="col" class="govuk-table__header">Status</th>
-            <th scope="col" class="govuk-table__header">Action</th>
+            <th scope="col" class="govuk-table__header">{{cms.tableHeading2}}</th>
+            <th scope="col" class="govuk-table__header">{{cms.tableHeading3}}</th>
+            <th scope="col" class="govuk-table__header">{{cms.tableHeading4}}</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
@@ -38,7 +46,7 @@
             <td class="govuk-table__cell">8wDsxn72</td>
             <td class="govuk-table__cell">Active</td>
             <td class="govuk-table__cell">
-              <a href="#">Cancel</a>
+              <a href="#">{{cms.tableCancelLink}}</a>
             </td>
           </tr>
 

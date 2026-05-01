@@ -1,9 +1,28 @@
 {% extends "layouts/layout_progress_tracker.njk" %}
 {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 {% from "govuk/components/task-list/macro.njk" import govukTaskList %}
+{% from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect %}
 
 {% block pageTitle %}
   Track the progress of your DBS check – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: commonCms.headerText.bannerPhase
+    },
+    html: commonCms.headerText.bannerText
+  }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
+
 {% endblock %}
 
 {% block content %}
@@ -11,12 +30,12 @@
   <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-full">
-      <h1 class="govuk-heading-xl">Track the progress of your DBS check</h1>
-      <p>This tracking information is updated daily, Monday to Friday. It is not updated at weekends.</p>
-      <p>It was last updated {{ currentDate }}</p>
+      <h1 class="govuk-heading-xl">{{cms.title}}</h1>
+      <p>{{cms.p1}}</p>
+      <p>{{cms.p2}}{{ currentDate }}</p>
 
       {{ govukInsetText({
-        text: "We will email you when your DBS check is complete."
+        text: cms.insetText
       }) }}
 
       {{ govukTaskList({
@@ -25,77 +44,77 @@
     {
       classes: "no-border-top",
       title: {
-        text: "Stage 1",
+        text: cms.stage1Title,
         classes: "govuk-heading-m no-border-top"
       },
       hint: {
-        text: "Application received"
+        text: cms.stage1Description
       },
       status: {
-        text: "Completed " + formattedDateOneWeekAgo,
+        text: cms.stage1Value + formattedDateOneWeekAgo,
         classes: "vertical-align-bottom"
       }
     },
     {
       title: {
-        text: "Stage 2",
+        text: cms.stage2Title,
         classes: "govuk-heading-m"
       },
       hint: {
-        text: "Police National Computer searched"
+        text: cms.stage2Description
       },
       status: {
         classes: "vertical-align-bottom",
         tag: {
-          text: "In progress",
+          text: cms.stage2Value,
           classes: "govuk-tag--light-blue vertical-align-bottom"
         }
       }
     },
     {
       title: {
-        text: "Stage 3",
+        text: cms.stage3Title,
         classes: "govuk-heading-m"
       },
       hint: {
-        text: "Barred lists checked (if required)"
+        text: cms.stage3Description
       },
       status: {
         classes: "vertical-align-bottom",
         tag: {
-          text: "Not started",
+          text: cms.stage3Value,
           classes: "govuk-tag--blue"
         }
       }
     },
     {
       title: {
-        text: "Stage 4",
+        text: cms.stage4Title,
         classes: "govuk-heading-m"
       },
       hint: {
-        text: "Records held by police searched"
+        text: cms.stage4Description
       },
       status: {
         classes: "vertical-align-bottom",
         tag: {
-          text: "Not started",
+          text: cms.stage4Value,
           classes: "govuk-tag--blue"
         }
       }
     },
     {
       title: {
-        text: "Stage 5",
+        text: cms.stage5Title,
         classes: "govuk-heading-m"
       },
       hint: {
-        text: "DBS check issued"
+        text: cms.stage5Description
       },
       status: {
         classes: "vertical-align-bottom",
         tag: {
-          text: "Not started",
+          text: cms.stage5Value,
           classes: "govuk-tag--blue"
         }
       }
