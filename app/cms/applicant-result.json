@@ -42,7 +42,8 @@
             "insetLinkText": "contact DBS",
             "insetP2": " if you need to report a mistake or dispute the result.",
             "shareButton": "Share Result",
-            "shareButtonLink": "/applicant-share-1?lang=en"
+            "shareButtonLink": "/applicant-share-1?lang=en",
+            "contactUsLink": "/applicant-contact?lang=en"
         },
         "disclaimer": {
             "label": "Disclaimer",
@@ -129,7 +130,8 @@
             "insetLinkText": "gysylltu â DBS",
             "insetP2": " os oes angen i chi roi gwybod am gamgymeriad neu anghytuno â'r canlyniad.",
             "shareButton": "Rhannu Canlyniad",
-            "shareButtonLink": "/applicant-share-1?lang=cy"
+            "shareButtonLink": "/applicant-share-1?lang=cy",
+            "contactUsLink": "/applicant-contact?lang=cy"
         },
         "disclaimer": {
             "label": "Ymwadiad",
