@@ -278,7 +278,6 @@ router.get("/sign_in_verify", (req, res, _next) => {
 
 router.get("/sign_in_otp", (req, res, _next) => {
   let backButton = "/sign_in_verify";
-  console.log(res.locals.language);
   res.render("one_login/sign_in_otp", {
     backButton: backButton,
     password: req.session?.selectedCertificate?.signInPassword || "",
