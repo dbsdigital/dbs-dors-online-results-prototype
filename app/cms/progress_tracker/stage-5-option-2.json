@@ -1,14 +1,14 @@
 {
     "en": {
         "title": "We completed your DBS check on ",
-        "p1": "You can share your result with someone else, like your employer.",
+        "p1": " to view your DBS check result. You can also share it with someone else, like your employer.",
         "linkText": "Sign in",
-        "p2": "to find out how to view and share your result."
+        "p2": "This service is available 8am to 11:30pm."
     },
     "cy": {
         "title": "Fe wnaethon ni gwblhau eich gwiriad DBS ar ",
-        "p1": "Gallwch rannu eich canlyniad gyda rhywun arall, fel eich cyflogwr.",
+        "p1": " i weld canlyniad eich gwiriad DBS. Gallwch hefyd ei rannu gyda rhywun arall, fel eich cyflogwr.",
         "linkText": "Mewngofnodwch",
-        "p2": "i ddarganfod sut i weld a rhannu eich canlyniad."
+        "p2": "Mae'r gwasanaeth hwn ar gael rhwng 8am a 11:30pm."
     }
 }
