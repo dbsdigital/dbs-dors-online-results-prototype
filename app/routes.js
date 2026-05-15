@@ -171,7 +171,7 @@ router.get("/start-nc", (req, res) => {
 router.get("/applicant-result", (req, res) => {
   if (req.session?.nc === true) {
     res.render("applicant-result-not-clear", {
-      cms: applicantResultText[res.locals.language],
+      cms: applicantResultNotClearText[res.locals.language],
       commonCms: commonCms[res.locals.language]
     });
   } else {
