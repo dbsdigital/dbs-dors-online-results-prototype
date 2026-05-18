@@ -1,0 +1,28 @@
+{
+    "en": {
+        "title": "Create your GOV.UK One Login or sign in",
+        "p1": "You can use your GOV.UK One Login to access some government services.",
+        "p2": "In the future, you'll be able to use it to access all services on GOV.UK.",
+        "p3": "You'll need:",
+        "bullet1": "an email address",
+        "bullet2": "a way to get security codes - this can be a UK mobile phone number or an authenticator app",
+        "insetText1": "You can also ",
+        "insetText2": "use GOV.UK One Login in Welsh (Cymraeg)",
+        "button1": "Create a GOV.UK One Login",
+        "button2": "Sign in",
+        "linkText1": "Services you can use with GOV.UK One Login (opens in new tab)"
+    },
+    "cy": {
+        "title": "Creu eich GOV.UK One Login neu fewngofnodi",
+        "p1": "Gallwch ddefnyddio eich GOV.UK One Login i gael mynediad at rai gwasanaethau’r llywodraeth.",
+        "p2": "Yn y dyfodol, gallwch ei ddefnyddio i gael mynediad i bob gwasanaeth ar GOV.UK.",
+        "p3": "Byddwch angen:",
+        "bullet1": "cyfeiriad e-bost",
+        "bullet2": "ffordd o gael codau diogelwch - gall hyn fod yn rif ffôn symudol y DU neu ap dilysydd",
+        "insetText1": "Gallwch hefyd ",
+        "insetText2": "ddefnyddio GOV.UK One Login yn Saesneg (English)",
+        "button1": "Creu eich GOV.UK One Login",
+        "button2": "Mewngofnodi",
+        "linkText1": "Gwasanaethau y gallwch eu defnyddio gyda GOV.UK One Login (agor mewn tab newydd)"
+    }
+}

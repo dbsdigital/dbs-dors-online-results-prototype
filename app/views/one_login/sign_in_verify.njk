@@ -12,10 +12,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
   <a href="/create_account" class="govuk-back-link">Back</a>
 {% endblock %}
@@ -27,20 +35,20 @@
       <form>
         <h1 class="govuk-label-wrapper">
           <label class="govuk-label govuk-label--l">
-            Enter your password
+            {{cms.title}}
           </label>
         </h1>
 
         <div class="govuk-form-group">
 
           <label class="govuk-label" for="password">
-            Password
+            {{cms.label}}
           </label>
 
           <input class="govuk-input" id="password" name="password" type="password" spellcheck="false" autocomplete="false"></div>
 
           <a href="/sign_in_otp" role="button" class="govuk-button">
-            Continue
+            {{cms.button1}}
           </a>
 
         </form>

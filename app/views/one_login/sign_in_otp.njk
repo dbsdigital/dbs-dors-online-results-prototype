@@ -13,10 +13,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
   <a href="/create_account" class="govuk-back-link">Back</a>
 
@@ -27,15 +35,15 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l govuk-!-margin-top-0 govuk-!-margin-bottom-3">
-        Check your phone
+        {{cms.title}}
       </h1>
 
-      <p class="govuk-body">We sent a code to the phone number linked to your GOV.UK One Login.</p>
-      <p class="govuk-body">It might take a few minutes to arrive. The code will expire after 15 minutes.</p>
+      <p class="govuk-body">{{cms.p1}}</p>
+      <p class="govuk-body">{{cms.p2}}</p>
 
       <div class="govuk-form-group">
         <label class="govuk-label" for="mobOTP">
-          Enter the 6 digit security code
+          {{cms.p3}}
         </label>
         <input
           class="govuk-input govuk-input--width-10"
@@ -50,18 +58,18 @@
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Problems with the code?
+              {{cms.dropDownText}}
             </span>
           </summary>
           <div class="govuk-details__text">
-            We can
-            <a href="#">send the code again</a>
-            if the code is not working or you did not receive it.
+            {{cms.insetText1}}
+            <a href="#">{{cms.insetText2}}</a>
+            {{cms.insetText3}}
           </div>
         </details>
 
         {{ govukButton({
-          text: "Continue",
+          text: cms.button1,
           href: "/applicant-result?lang=cy" if lang === "cy" else "/applicant-result?lang=en"
         }) }}
 

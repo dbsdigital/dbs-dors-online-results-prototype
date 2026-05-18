@@ -21,6 +21,10 @@ const employerViewCheckText = require('./cms/employer/employer-view-check.json')
 const employerEnterCertText = require('./cms/employer/employer-enter-cert.json');
 const employerResultText = require('./cms/employer/employer-result.json');
 const employViewCompleteText = require('./cms/employer/employer-view-complete.json');
+const createAccountText = require('./cms/one_login/create-account.json');
+const signInText = require('./cms/one_login/sign-in.json');
+const signInVerify = require('./cms/one_login/sign-in-verify.json');
+const signInOtpText = require('./cms/one_login/sign-in-otp.json');
 
 router.get("*", (req, res, next) => {
   res.locals.language = req.query?.lang || 'en';
@@ -254,12 +258,17 @@ router.get("/applicant-result-nc", (req, res) => {
 
 // One Login
 router.get("/create_account", (req, res) => {
-  res.render("one_login/create_account");
+  res.render("one_login/create_account", {
+    cms: createAccountText[req.session?.data?.lang],
+    commonCms: commonCms[req.session?.data?.lang]
+  });
 });
 
 router.get("/sign_in", (req, res, _next) => {
   let backButton = "/create_account";
   res.render("one_login/sign_in", {
+    cms: signInText[req.session?.data?.lang],
+    commonCms: commonCms[req.session?.data?.lang],
     backButton: backButton,
     emailAddr: req.session?.selectedCertificate?.emailAddress || "",
     validation: null,
@@ -270,6 +279,8 @@ router.get("/sign_in", (req, res, _next) => {
 router.get("/sign_in_verify", (req, res, _next) => {
   let backButton = "/sign_in";
   res.render("one_login/sign_in_verify", {
+    cms: signInVerify[req.session?.data?.lang],
+    commonCms: commonCms[req.session?.data?.lang],
     backButton: backButton,
     password: req.session?.selectedCertificate?.signInPassword || "",
     validation: null,
@@ -279,9 +290,11 @@ router.get("/sign_in_verify", (req, res, _next) => {
 router.get("/sign_in_otp", (req, res, _next) => {
   let backButton = "/sign_in_verify";
   res.render("one_login/sign_in_otp", {
+    cms: signInOtpText[req.session?.data?.lang],
+    commonCms: commonCms[req.session?.data?.lang],
     backButton: backButton,
     password: req.session?.selectedCertificate?.signInPassword || "",
-    lang: res.locals.language,
+    lang: req.session?.data?.lang,
     validation: null,
   });
 });

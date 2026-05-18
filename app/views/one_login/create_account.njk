@@ -12,10 +12,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
 {% endblock %}
 
@@ -24,25 +32,25 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l govuk-!-margin-top-0 govuk-!-margin-bottom-3">
-        Create your GOV.UK One Login or sign in
+        {{cms.title}}
       </h1>
 
-      <p>You can use your GOV.UK One Login to access some government services.</p>
-      <p>In the future, you'll be able to use it to access all services on GOV.UK.</p>
-      <p>You'll need:</p>
+      <p>{{cms.p1}}</p>
+      <p>{{cms.p2}}</p>
+      <p>{{cms.p3}}</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>an email address</li>
-        <li>a way to get security codes - this can be a UK mobile phone number or an authenticator app</li>
+        <li>{{cms.bullet1}}</li>
+        <li>{{cms.bullet2}}</li>
       </ul>
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
       {{ govukInsetText({
-        html: "<p>You can also <a href='' classes='govuk-link'>use GOV.UK One Login in Welsh (Cymraeg)</a></p>"
+        html: "<p>" + cms.insetText1 + "<a href='' classes='govuk-link'>" + cms.insetText2 + "</a></p>"
       }) }}
 
       {{ govukButton({
-        text: "Create a GOV.UK One Login",
+        text: cms.button1,
         href: "#",
         isStartButton: false,
         classes: "govuk-!-margin-right-3"
@@ -50,13 +58,13 @@
 
       <div class="one-login-sign-in-div">
       {{ govukButton({
-        text: "Sign in",
+        text: cms.button2,
         href: "/sign_in",
         classes: "govuk-button--secondary"
       }) }}
       </div>
 
-      <p><a href="https://www.gov.uk/using-your-gov-uk-one-login/services">Services you can use with GOV.UK One Login (opens in new tab)</a></p>
+      <p><a href="https://www.gov.uk/using-your-gov-uk-one-login/services">{{cms.linkText1}}</a></p>
     </div>
 
   </div>
