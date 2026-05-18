@@ -1,0 +1,12 @@
+{
+    "en": {
+        "title": "Enter your password",
+        "label": "Password",
+        "button1": "Continue"
+    },
+    "cy": {
+        "title": "Rhowch eich cyfrinair",
+        "label": "Cyfrinair",
+        "button1": "Parhewch"
+    }
+}

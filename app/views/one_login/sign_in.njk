@@ -12,10 +12,18 @@
 {% block beforeContent %}
   {{ govukPhaseBanner({
     tag: {
-      text: "beta"
+      text: commonCms.headerText.bannerPhase
     },
-    html: 'This is a new service. Help us improve it and <a class="govuk-link" target="_blank" href="#">give your feedback (opens in a new tab).</a>'
+    html: commonCms.headerText.bannerText
   }) }}
+
+  {{
+    hmrcLanguageSelect({
+    language: 'cy' if data['lang'] === 'cy' else 'en',
+    en: { href: '?lang=en' },
+    cy: { href: '?lang=cy' }
+    })
+  }}
 
   <a href="/create_account" class="govuk-back-link">Back</a>
 {% endblock %}
@@ -29,14 +37,14 @@
         <div class="govuk-form-group">
           <h1 class="govuk-label-wrapper">
             <label class="govuk-label govuk-label--l" for="email">
-              Enter your email address to sign in to your GOV.UK One Login
+              {{cms.title}}
             </label>
           </h1>
 
           <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" autocomplete="email"></div>
 
           <a href="/sign_in_verify" role="button" class="govuk-button">
-            Continue
+            {{cms.button1}}
           </a>
 
         </form>
