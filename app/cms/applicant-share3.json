@@ -2,7 +2,7 @@
     "en": {
         "title": "Share your DBS check result",
         "boxHeading": "Share code",
-        "boxButton": "Copy Code",
+        "boxButton": "Copy code",
         "p1": "Your share code is:",
         "bullet1": "single use",
         "bullet2": "case sensitive",
@@ -21,7 +21,7 @@
     "cy": {
         "title": "Rhannwch ganlyniad eich gwiriad DBS",
         "boxHeading": "Rhannu cod",
-        "boxButton": "Copi Cod",
+        "boxButton": "Copi cod",
         "p1": "Eich cod rhannu yw:",
         "bullet1": "defnydd sengl",
         "bullet2": "sensitif i lythrennau",
