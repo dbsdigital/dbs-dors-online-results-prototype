@@ -1,0 +1,28 @@
+{
+    "en": {
+        "title": "View or share your DBS check result",
+        "p1": "You can use this service to:",
+        "bullet1": "view your DBS check result",
+        "bullet2": "share your result with someone else, like an employer",
+        "bullet3": "find out how to contact us if you believe any information on your result is incorrect",
+        "h1": "What you'll need",
+        "p2": "To view your result you'll need to sign in to the GOV.UK One Login you created when you applied for your DBS check.",
+        "p3": "If you have more than one application you will also need your application number. We sent this to you by email.",
+        "insetText": "We will sign you out if you are inactive for 15 minutes. This is to help protect your information. Your information will not be saved and you will need to start again.",
+        "h2": "Viewing your result",
+        "p4": "This service is available 8am to 11:30pm."
+    },
+    "cy": {
+        "title": "Gweld neu rannu canlyniad eich gwiriad DBS",
+        "p1": "Gallwch ddefnyddio’r gwasanaeth hwn i:",
+        "bullet1": "gweld canlyniad eich gwiriad DBS",
+        "bullet2": "rhannu'ch canlyniad gyda rhywun arall, fel cyflogwr",
+        "bullet3": "darganfod sut i gysylltu â ni os ydych yn credu bod unrhyw wybodaeth am eich canlyniad yn anghywir",
+        "h1": "Yr hyn y bydd ei angen arnoch chi",
+        "p2": "I weld eich canlyniad bydd angen i chi fewngofnodi i'r GOV.UK One Login a greoch chi pan wnaethoch chi gais am eich gwiriad DBS.",
+        "p3": "Os oes gennych fwy nag un cais bydd angen eich rhif cais arnoch hefyd. Anfonwyd hwn atoch drwy e-bost.",
+        "insetText": "Byddwn yn eich allgofnodi os nad ydych yn weithgar am 15 munud. Mae hyn er mwyn helpu i ddiogelu'ch gwybodaeth. Ni fydd eich gwybodaeth yn cael ei chadw a bydd angen i chi ddechrau eto.",
+        "h2": "Gweld eich canlyniad",
+        "p4": "Mae'r gwasanaeth hwn ar gael rhwng 8am a 11:30pm."
+    }
+}

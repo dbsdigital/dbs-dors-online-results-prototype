@@ -1,8 +1,8 @@
 {
     "en": {
-        "title": "Share your DBS result",
-        "boxHeading": "Share Code",
-        "boxButton": "Copy Code",
+        "title": "Share your DBS check result",
+        "boxHeading": "Share code",
+        "boxButton": "Copy code",
         "p1": "Your share code is:",
         "bullet1": "single use",
         "bullet2": "case sensitive",
@@ -19,9 +19,9 @@
         "buttonLink": "/applicant-share-2"
     },
     "cy": {
-        "title": "Rhannwch eich canlyniad DBS",
+        "title": "Rhannwch ganlyniad eich gwiriad DBS",
         "boxHeading": "Rhannu cod",
-        "boxButton": "Copi Cod",
+        "boxButton": "Copi cod",
         "p1": "Eich cod rhannu yw:",
         "bullet1": "defnydd sengl",
         "bullet2": "sensitif i lythrennau",

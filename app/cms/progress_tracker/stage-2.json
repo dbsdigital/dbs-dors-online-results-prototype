@@ -1,8 +1,9 @@
 {
     "en": {
         "title": "Track the progress of your DBS check",
-        "p1": "This tracking information is updated daily, Monday to Friday. It is not updated at weekends.",
-        "p2": "It was last updated ",
+        "p1": "This service is available daily from 8am to 11:30pm.",
+        "p2": "Updates to the progress of your DBS check are made Monday to Friday.",
+        "p3": "Last update: ",
         "insetText": "We will email you when your DBS check is complete.",
         "stage1Title": "Stage 1",
         "stage1Description": "Application received",
@@ -22,8 +23,9 @@
     },
     "cy": {
         "title": "Olrhain cynnydd eich gwiriad DBS",
-        "p1": "Mae'r wybodaeth olrhain hon yn cael ei diweddaru bob dydd, o ddydd Llun i ddydd Gwener. Nid yw'n cael ei diweddaru ar benwythnosau.",
-        "p2": "Cafodd ei diweddaru ddiwethaf ",
+        "p1": "Mae'r gwasanaeth hwn ar gael bob dydd o 8am i 11:30pm.",
+        "p2": "Gwneir diweddariadau i gynnydd eich gwiriad DBS o ddydd Llun i ddydd Gwener.",
+        "p3": "Diweddariad diwethaf: ",
         "insetText": "Byddwn yn anfon e-bost atoch pan fydd eich gwiriad DBS wedi'i gwblhau.",
         "stage1Title": "Cam 1",
         "stage1Description": "Cais wedi'i dderbyn",

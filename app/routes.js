@@ -7,6 +7,7 @@ const govukPrototypeKit = require("govuk-prototype-kit");
 const { get } = require("jquery");
 const router = govukPrototypeKit.requests.setupRouter();
 const commonCms = require('./cms/common.json');
+const startText = require('./cms/start.json');
 const stage2Text = require('./cms/progress_tracker/stage-2.json');
 const stage5Option1Text = require('./cms/progress_tracker/stage-5-option-1.json');
 const stage5Option2Text = require('./cms/progress_tracker/stage-5-option-2.json');
@@ -157,7 +158,11 @@ router.get("/applicant/title", (req, res) => {
 router.get("/start", (req, res) => {
   delete req.session.nc;
   delete req.session.title;
-  res.render("start", { title: req.session.title });
+  res.render("start", { 
+    title: req.session.title,
+    cms: startText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  });
 });
 
 router.get("/start/title", (req, res) => {
