@@ -11,15 +11,15 @@
         "insetText1": "You will need to send the share code and email to the person you want to view your result.",
         "buttonText": "Share result",
         "buttonLink": "/applicant-share-2",
-        "h2": "Receipts for Online Results",
-        "p4": "The person you share your Online Result with can also download a receipt to prove they have viewed your result.",
+        "h2": "Receipts for DBS check results",
+        "p4": "The person you share your result with can also download a receipt to prove they have viewed it.",
         "p5": "The receipt includes:",
         "bullet4": "your name",
         "bullet5": "your position - for example, teacher",
         "bullet6": "your DBS certificate number and date of issue",
         "bullet7": "if your check is standard or enhanced and the workforce it is for",
         "bullet8": "if any barred lists were checked",
-        "bullet9": "the date they viewed your online result"
+        "bullet9": "the date they viewed your result"
     },
     "cy": {
         "title": "Sut i rannu canlyniad eich gwiriad DBS",
@@ -33,14 +33,14 @@
         "insetText1": "Bydd angen i chi anfon y cod rhannu a'r e-bost at y person rydych chi eisiau iddo weld eich canlyniad.",
         "buttonText": "Rhannu canlyniad",
         "buttonLink": "/applicant-share-2?lang=cy",
-        "h2": "Derbynebau am ganlyniadau ar-lein",
-        "p4": "Gall y person rydych chi'n rhannu eich canlyniad ar-lein ag ef hefyd lawrlwytho derbynneb i brofi eu bod nhw wedi gweld eich canlyniad.",
+        "h2": "Derbynebau ar gyfer canlyniadau gwiriadau DBS",
+        "p4": "Gall y person rydych chi'n rhannu eich canlyniad ag ef hefyd lawrlwytho derbynneb i brofi eu bod nhw wedi'i weld.",
         "p5": "Mae'r dderbynneb yn cynnwys:",
         "bullet4": "eich enw",
         "bullet5": "eich swydd - er enghraifft, athro",
         "bullet6": "rhif eich tystysgrif DBS a'r dyddiad cyhoeddi",
         "bullet7": "os yw eich gwiriad yn safonol neu'n fanylach a'r gweithlu y mae ar ei gyfer",
         "bullet8": "os gwiriwyd unrhyw restrau gwaharddedig",
-        "bullet9": "y dyddiad y gwnaethon nhw weld eich canlyniad ar-lein"
+        "bullet9": "y dyddiad y gwnaethon nhw weld eich canlyniad"
     }
 }
