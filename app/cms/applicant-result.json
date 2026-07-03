@@ -38,8 +38,9 @@
             "value13": "None recorded",
             "key14": "Other relevant information disclosed at the chief police officer(s) discretion",
             "value14": "None recorded",
-            "insetLinkText": "Contact DBS",
-            "insetP2": " to report a mistake or if you do not agree with the result.",
+            "insetP1": "If you need to report a mistake or do not agree with the result, you can ",
+            "insetLinkText": "contact DBS",
+            "insetP2": ".",
             "shareButton": "Share result",
             "shareButtonLink": "/applicant-share-1?lang=en",
             "contactUsLink": "/applicant-contact?lang=en"
@@ -125,8 +126,9 @@
             "value13": "None recorded",
             "key14": "Gwybodaeth berthnasol arall a ddatgelir yn ôl disgresiwn prif swyddog(ion) yr heddlu",
             "value14": "None recorded",
-            "insetLinkText": "Gysylltu â DBS",
-            "insetP2": " i roi gwybod am gamgymeriad neu os nad ydych chi'n cytuno â'r canlyniad.",
+            "insetP1": "Os oes angen i chi roi gwybod am gamgymeriad neu os nad ydych yn cytuno â'r canlyniad, gallwch ",
+            "insetLinkText": "cysylltwch â'r DBS",
+            "insetP2": ".",
             "shareButton": "Rhannu canlyniad",
             "shareButtonLink": "/applicant-share-1?lang=cy",
             "contactUsLink": "/applicant-contact?lang=cy"
