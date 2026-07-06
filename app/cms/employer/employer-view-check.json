@@ -1,7 +1,7 @@
 {
     "cy": {
-        "title": "Gweld canlyniad DBS rhywun",
-        "p1": "Gallwch ddefnyddio'r gwasanaeth hwn i weld canlyniad DBS rhywun.",
+        "title": "Gweld canlyniad gwiriad DBS rhywun",
+        "p1": "Gallwch ddefnyddio'r gwasanaeth hwn i weld canlyniad gwiriad DBS rhywun.",
         "h1": "Beth fydd ei angen arnoch chi",
         "p2": "I ddefnyddio'r gwasanaeth hwn bydd angen:",
         "bullet1": "cod rhannu un-tro yr ymgeisydd",
@@ -9,7 +9,7 @@
         "insetText": "Dim ond unwaith y gallwch chi ddefnyddio'r cod rhannu a rhaid i chi ei ddefnyddio o fewn 21 diwrnod.",
         "p3": "Os oes angen i chi weld y canlyniad eto bydd rhaid i chi ofyn i'r ymgeisydd am god rhannu arall.",
         "p4": "Byddwn yn rhoi gwybod i'r ymgeisydd pan fyddwch wedi gweld eu canlyniad.",
-        "h2": "Os oes angen prawf arnoch eich bod wedi gweld canlyniad DBS",
+        "h2": "Os oes angen prawf arnoch eich bod wedi gweld canlyniad gwiriad DBS",
         "p5": "Bydd y gwasanaeth hwn hefyd yn caniatáu ichi lawrlwytho derbynneb PDF fel prawf eich bod wedi gweld canlyniad ymgeisydd.",
         "p6": "Mae'r dderbynneb yn cynnwys:",
         "bullet3": "eu henw",
@@ -23,8 +23,8 @@
         "buttonLink": "/employer/employer_enter_cert?lang=cy"
     },
     "en": {
-        "title": "View someone’s DBS result",
-        "p1": "You can use this service to view someone's DBS result.",
+        "title": "View someone’s DBS check result",
+        "p1": "You can use this service to view someone's DBS check result.",
         "h1": "What you will need",
         "p2": "To use this service you will need:",
         "bullet1": "the applicant's one-time share code",
@@ -32,7 +32,7 @@
         "insetText": "You can only use the share code once and you must use it within 21 days.",
         "p3": "If you need to view the result again you will have to ask the applicant for another share code.",
         "p4": "We will let the applicant know when you have viewed their result.",
-        "h2": "If you need proof that you have viewed a DBS result",
+        "h2": "If you need proof that you have viewed a DBS check result",
         "p5": "This service will also allow you to download a PDF receipt as proof you have viewed an applicant's result.",
         "p6": "The receipt includes:",
         "bullet3": "their name",
