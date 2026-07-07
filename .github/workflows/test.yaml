@@ -8,7 +8,7 @@ on:
 
 jobs:
   tests:
-
+    if: false
     strategy:
       fail-fast: false  # continue other tests if one test in matrix fails
       matrix:

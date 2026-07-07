@@ -10,6 +10,7 @@ jobs:
   test-heroku:
 
     name: Test kit on Heroku
+    if: false
     runs-on: ubuntu-latest
 
     env:

@@ -1,48 +1,173 @@
-# Contribution guidelines
+# Contributing
 
-We really like contributions and bug reports, in fact the project wouldn't have got to this stage without them.
-We do have a few guidelines to bear in mind.
+Thank you for considering contributing to this project
 
-## Contributing
+We welcome contributions from everyone. Contributions help us improve quality, usability, and accessibility for all users.
 
-If you’ve got an idea or suggestion you can:
+---
 
-* email [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk)
-* [get in touch on developer Slack channel](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev)([open in app](slack://channel?team=T04V6EBTR&amp;id=C0E1063DW))
-* [create a GitHub issue](https://github.com/alphagov/govuk-prototype-kit/issues)
+## How to Contribute
 
-## Raising bugs
+There are several ways you can contribute:
 
-When raising bugs please explain the issue in good detail and provide a guide to how to replicate it.
-When describing the bug it's useful to follow the format:
+* Reporting bugs
+* Suggesting improvements
+* Improving documentation
+* Submitting code changes
+* Reviewing pull requests
 
-- what you did
-- what you expected to happen
-- what happened
+---
 
-## Suggesting features
+## Reporting Issues
 
-Please raise feature requests as issues before contributing any code.
+Before creating an issue:
 
-This ensures they are discussed properly before any time is spent on them.
+1. Check existing issues to avoid duplicates.
+2. Make sure your issue is clear and actionable.
 
-## Contributing code
+When raising an issue, include:
 
-### Indentation and whitespace
+* A clear title and description
+* Steps to reproduce (if applicable)
+* Expected vs actual behaviour
+* Screenshots or logs where helpful
 
-Your JavaScript code should pass [linting](internal_docs/linting.md).
+---
 
-For anything else, maintain 2-space, soft-tabs only indentation. No trailing whitespace.
+## Suggesting Changes
 
-### Commit hygiene
+We welcome ideas for improvements:
 
-Please see our [Git style guide in the 'How to store source code' page of the GDS Way](https://gds-way.cloudapps.digital/standards/source-code.html#commit-messages), which describes how we prefer Git history and commit messages to read.
+* Open an issue describing your suggestion
+* Explain the problem and proposed solution
+* Include any alternatives you’ve considered
 
-### Review apps
+---
 
-When a pull request is opened, Heroku may create a [review app](https://devcenter.heroku.com/articles/github-integration-review-apps#viewing-review-apps)
-that will allow you and your reviewers to preview how your changes will appear for users.
-If a review app is not created automatically, you can ask someone from the
-Prototype Kit team to create one.
+## Development Setup
 
-Review apps are password protected with the username `govuk` and the password `govuk`.
+Clone the repository:
+
+```bash
+git clone https://github.com/<organisation>/<repository>.git
+cd <repository>
+```
+
+Follow any setup steps described in the `README.md`.
+
+---
+
+## Branching Strategy
+
+* Create a new branch for each change:
+
+```bash
+git checkout -b feature/your-feature-name
+```
+
+* Keep branches focused and small
+* Use descriptive, meaningful names
+
+---
+
+## Coding Standards
+
+* Write clear, readable, and maintainable code
+* Follow existing patterns and conventions
+* Add comments where necessary
+* Include tests where appropriate
+
+---
+
+## Testing
+
+Before submitting:
+
+* Run all tests locally
+* Ensure new code is covered by tests
+* Verify nothing else is broken
+
+---
+
+## Pull Requests
+
+When submitting a pull request (PR):
+
+1. Link to the relevant issue (if applicable)
+2. Clearly describe your changes
+3. Keep PRs small and focused
+4. Ensure all checks pass
+
+### PR Checklist
+
+* \[ ] Code builds successfully
+* \[ ] Tests pass
+* \[ ] Documentation updated (if needed)
+* \[ ] No unnecessary changes included
+
+---
+
+## Change Log
+
+If you open a GitHub pull request on this repo, please update CHANGELOG to reflect your contribution.
+
+Add your entry under Unreleased as Breaking changes, New features, Fixes.
+
+Internal changes to the project that are not part of the public API do not need changelog entries, for example fixing GitHub Actions workflows.
+
+These sections follow semantic versioning, where:
+* \[ ] Breaking changes correspond to a major (1.X.X) change.
+* \[ ] New features or deprecations correspond to a minor (X.1.X) change.
+* \[ ] Bug fixes correspond to a patch (X.X.1) change.
+* \[ ] See the CHANGELOG\_TEMPLATE.md for an example for how this looks.
+Include the modified CHANGELOG in the PR.
+---
+
+## Code Review
+
+All contributions go through review:
+
+* Be open to feedback
+* Keep discussions constructive and respectful
+* Iteratively improve your PR as needed
+
+---
+
+## Security Issues
+
+If you discover a security vulnerability:
+
+* **Do not open a public issue**
+* Report it privately to the maintainers (see `SECURITY.md` if available)
+
+---
+
+## Documentation
+
+Good documentation is essential:
+
+* Keep README and docs up to date
+* Use plain English
+* Follow accessibility best practices
+
+---
+
+## Code of Conduct
+
+This project follows a Code of Conduct.
+
+By participating, you agree to:
+
+* Be respectful and inclusive
+* Value diverse perspectives
+* Avoid harmful or offensive language
+
+---
+
+## Thank You
+
+Your contributions make this project better for everyone.
+
+If you’re unsure about anything, open an issue — we’re happy to help.
+
+---
