@@ -1,0 +1,18 @@
+{
+    "en": {
+        "title": "Your DBS check application was withdrawn",
+        "p1": "We cannot display your result online.",
+        "p2": "This is because either you, or the Registered Body you applied through, asked us to withdraw your application.",
+        "p3": "We have sent you a letter in the post with more information.",
+        "buttonText": "Finish",
+        "buttonLink": "/start?lang=en"
+    },
+    "cy": {
+        "title": "Tynnwyd eich cais am wiriad DBS yn ôl",
+        "p1": "Ni allwn arddangos eich canlyniad ar-lein.",
+        "p2": "Mae hyn oherwydd naill ai eich bod chi, neu'r Corff Cofrestredig y gwnaethoch gais drwyddo, wedi gofyn i ni dynnu eich cais yn ôl.",
+        "p3": "Rydym wedi anfon llythyr atoch yn y post gyda rhagor o wybodaeth.",
+        "buttonText": "Gorffen",
+        "buttonLink": "/start?lang=cy"
+    }
+}
