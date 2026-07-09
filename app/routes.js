@@ -14,6 +14,7 @@ const stage5Option2Text = require('./cms/progress_tracker/stage-5-option-2.json'
 const applicantResultText = require('./cms/applicant-result.json');
 const applicantResultNotClearText = require('./cms/applicant-result-not-clear.json');
 const applicantResultWithdrawnText = require('./cms/applicant-result-withdrawn.json');
+const applicantResultRemovedUpdateServiceText = require('./cms/applicant-result-removed-update-service.json');
 const applicantShare1Text = require('./cms/applicant-share1.json');
 const applicantShare2Text = require('./cms/applicant-share2.json');
 const applicantShare3Text = require('./cms/applicant-share3.json');
@@ -265,6 +266,13 @@ router.get("/applicant-result-nc", (req, res) => {
 router.get("/applicant-result-withdrawn", (req, res) => {
   res.render("applicant-result-withdrawn", {
     cms: applicantResultWithdrawnText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  })
+});
+
+router.get("/applicant-result-removed-update-service", (req, res) => {
+  res.render("applicant-result-removed-update-service", {
+    cms: applicantResultRemovedUpdateServiceText[res.locals.language],
     commonCms: commonCms[res.locals.language]
   })
 })

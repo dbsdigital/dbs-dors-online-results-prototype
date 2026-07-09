@@ -1,0 +1,22 @@
+{
+    "en": {
+        "title": "We have removed your DBS check result",
+        "p1": "This is because you have registered for the DBS Update Service and something on your result has changed.",
+        "p2": "You can ",
+        "linkText1": "sign in to the Update Service ",
+        "p3": "to see what has changed.",
+        "p4": "We have cancelled any active share codes for this result.",
+        "buttonText": "Finish",
+        "buttonLink": "/start?lang=en"
+    },
+    "cy": {
+        "title": "Rydym wedi dileu canlyniad eich gwiriad DBS",
+        "p1": "Mae hyn oherwydd eich bod wedi cofrestru ar gyfer Gwasanaeth Diweddaru’r DBS ac mae rhywbeth ar eich canlyniad wedi newid.",
+        "p2": "Gallwch ",
+        "linkText1": "fewngofnodi i'r Gwasanaeth Diweddaru ",
+        "p3": "i weld beth sydd wedi newid.",
+        "p4": "Rydym wedi canslo unrhyw godau rhannu gweithredol ar gyfer y canlyniad hwn.",
+        "buttonText": "Gorffen",
+        "buttonLink": "/start?lang=cy"
+    }
+}
