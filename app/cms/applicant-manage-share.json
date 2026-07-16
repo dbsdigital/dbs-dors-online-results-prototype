@@ -1,18 +1,18 @@
 {
-    "en": {
-        "title": "Manage Share Codes",
-        "tableHeading1": "Shared with",
-        "tableHeading2": "Code",
-        "tableHeading3": "Status",
-        "tableHeading4": "Action",
-        "tableCancelLink": "Cancel"
-    },
-    "cy": {
-        "title": "Rheoli codau rhannu",
-        "tableHeading1": "Wedi'i rannu â",
-        "tableHeading2": "Cod",
-        "tableHeading3": "Statws",
-        "tableHeading4": "Gweithredu",
-        "tableCancelLink": "Canslo"
-    }
+  "en": {
+    "title": "Manage Share Codes",
+    "tableHeading1": "Shared with",
+    "tableHeading2": "Code",
+    "tableHeading3": "Status",
+    "tableHeading4": "Action",
+    "tableCancelLink": "Cancel"
+  },
+  "cy": {
+    "title": "Rheoli codau rhannu",
+    "tableHeading1": "Wedi'i rannu â",
+    "tableHeading2": "côd",
+    "tableHeading3": "Statws",
+    "tableHeading4": "Gweithredu",
+    "tableCancelLink": "Canslo"
+  }
 }

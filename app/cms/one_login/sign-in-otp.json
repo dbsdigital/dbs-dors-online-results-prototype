@@ -1,24 +1,24 @@
 {
-    "en": {
-        "title": "Check your phone",
-        "p1": "We sent a code to the phone number linked to your GOV.UK One Login.",
-        "p2": "It might take a few minutes to arrive. The code will expire after 15 minutes.",
-        "p3": "Enter the 6 digit security code",
-        "dropDownText": "Problems with the code?",
-        "insetText1": "We can ",
-        "insetText2": "send the code again",
-        "insetText3": " if the code is not working or you did not receive it.",
-        "button1": "Continue"
-    },
-    "cy": {
-        "title": "Gwiriwch eich ffôn",
-        "p1": "Fe wnaethon ni anfon cod at y rhif ffôn sy'n gysylltiedig â'ch GOV.UK One Login.",
-        "p2": "Efallai y bydd yn cymryd ychydig funudau i gyrraedd. Bydd y cod yn dod i ben ar ôl 15 munud.",
-        "p3": "Rhowch y cod diogelwch 6 digid",
-        "dropDownText": "Problemau gyda'r cod?",
-        "insetText1": "Gallwn ",
-        "insetText2": "anfon y cod eto",
-        "insetText3": " os nad yw'r cod yn gweithio neu os nad ydych chi wedi'i dderbyn.",
-        "button1": "Parhewch"
-    }
+  "en": {
+    "title": "Check your phone",
+    "p1": "We sent a code to the phone number linked to your GOV.UK One Login.",
+    "p2": "It might take a few minutes to arrive. The code will expire after 15 minutes.",
+    "p3": "Enter the 6 digit security code",
+    "dropDownText": "Problems with the code?",
+    "insetText1": "We can ",
+    "insetText2": "send the code again",
+    "insetText3": " if the code is not working or you did not receive it.",
+    "button1": "Continue"
+  },
+  "cy": {
+    "title": "Gwiriwch eich ffôn",
+    "p1": "Fe wnaethon ni anfon côd at y rhif ffôn sy'n gysylltiedig â'ch GOV.UK One Login.",
+    "p2": "Efallai y bydd yn cymryd ychydig funudau i gyrraedd. Bydd y côd yn dod i ben ar ôl 15 munud.",
+    "p3": "Rhowch y côd diogelwch 6 digid",
+    "dropDownText": "Problemau gyda'r côd?",
+    "insetText1": "Gallwn ",
+    "insetText2": "anfon y côd eto",
+    "insetText3": " os nad yw'r côd yn gweithio neu os nad ydych chi wedi'i dderbyn.",
+    "button1": "Parhewch"
+  }
 }
