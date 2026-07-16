@@ -1,20 +1,20 @@
 {
-    "en": {
-        "title": "Enter the applicant’s details",
-        "h1": "Certificate number",
-        "label1": "Enter the last 6 digits of the applicant’s certificate number",
-        "h2": "Share code",
-        "label2": "Share codes are 8 characters long and case sensitive for example, gH345hbN",
-        "buttonText": "Continue",
-        "buttonLink": "/employer/employer_view_cert?lang=en"
-    },
-    "cy": {
-        "title": "Nodwch fanylion yr ymgeisydd",
-        "h1": "Rhif y dystysgrif",
-        "label1": "Nodwch y 6 digid olaf o rif tystysgrif yr ymgeisydd",
-        "h2": "Cod rhannu",
-        "label2": "Mae codau rhannu yn 8 nod o hyd ac yn sensitif i lythrennau mawr a bach er enghraifft, gH345hbN",
-        "buttonText": "Parhau",
-        "buttonLink": "/employer/employer_view_cert?lang=cy"
-    }
+  "en": {
+    "title": "Enter the applicant’s details",
+    "h1": "Certificate number",
+    "label1": "Enter the last 6 digits of the applicant’s certificate number",
+    "h2": "Share code",
+    "label2": "Share codes are 8 characters long and case sensitive for example, gH345hbN",
+    "buttonText": "Continue",
+    "buttonLink": "/employer/employer_view_cert?lang=en"
+  },
+  "cy": {
+    "title": "Nodwch fanylion yr ymgeisydd",
+    "h1": "Rhif y dystysgrif",
+    "label1": "Nodwch y 6 digid olaf o rif tystysgrif yr ymgeisydd",
+    "h2": "Côd rhannu",
+    "label2": "Mae codau rhannu yn 8 nod o hyd ac yn sensitif i lythrennau mawr a bach er enghraifft, gH345hbN",
+    "buttonText": "Parhau",
+    "buttonLink": "/employer/employer_view_cert?lang=cy"
+  }
 }
