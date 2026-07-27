@@ -1,14 +1,33 @@
 
-{% extends "layouts/layout_employer.html" %}
+{% extends "govuk/template.njk" %}
 {% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
 {% block pageTitle %}
-  Home – GOV.UK Prototype Kit
+  PDF Preview – GOV.UK Prototype Kit
 {% endblock %}
+
+{% block head %}
+  {% include "includes/head.njk" %}
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block footer %}{% endblock %}
+
+{% block bodyEnd %}
+  {% include "includes/scripts.njk" %}
+{% endblock %}
+
 
 {% block content %}
 <div class="govuk-grid-row">
-    <img src="/public/images/Disclosure_and_Barring_Service.svg" style="margin-bottom: 40px;">
+
+    {{ govukWarningText({
+      text: "This page will be a downloadable PDF file within the real service",
+      iconFallbackText: "Warning"
+    }) }}
+    <img src="/public/images/Disclosure_and_Barring_Service_Logo.svg" class="dbs-logo" style="margin-bottom: 40px;">
 
     <h1 class="govuk-heading-l">DBS check result receipt</h1>
 
@@ -17,9 +36,6 @@
 
     <h3 class="govuk-heading-s" style="margin-bottom: 6px;">Date result was viewed</h3>
     <p class="govuk-body">12 December 2022</p>
-
-    <h3 class="govuk-heading-s" style="margin-bottom: 6px;">Applicant name</h3>
-    <p class="govuk-body">Bill Carr</p>
 
     <h2 class="govuk-heading-m">DBS check details</h2>
 
