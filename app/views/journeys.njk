@@ -92,6 +92,27 @@
               [
               {
                 classes: "govuk-!-width-one-quarter",
+                  text: "Result Not Available Email"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/result_not_available_email"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/result_not_available_email\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when their check has been completed however they cannot view the result online."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
                   text: "Application Status Tracker"
               },
               {
