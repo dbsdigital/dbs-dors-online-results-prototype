@@ -176,7 +176,18 @@ router.get("/start/title", (req, res) => {
 // start applicant journey with intention of showing not clear result after sign in
 router.get("/start-nc", (req, res) => {
   req.session.nc = true;
-  res.render("start", { title: req.session.title });
+  res.render("start", {
+    title: req.session.title,
+    cms: startText[res.locals.language],
+    commonCms: commonCms[res.locals.language]
+  });
+});
+
+// applicant submitted email, entry point for the journey that ends in an unclear result
+router.get("/applicant_submitted_email-nc", (req, res) => {
+  res.render("applicant_submitted_email", {
+    trackerLink: "/progress_tracker/stage5_option2?lang=en"
+  });
 });
 
 router.get("/applicant-result", (req, res) => {

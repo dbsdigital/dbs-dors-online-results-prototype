@@ -260,6 +260,27 @@
               [
               {
                 classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result (unclear, via sign in)"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant_submitted_email-nc"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email-nc\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "Full applicant journey from the submitted confirmation email through to signing in with GOV UK One Login, ending on the applicant result page with an unclear result."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
                   text: "Applicant Share Result Email"
               },
               {
