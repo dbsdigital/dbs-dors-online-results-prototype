@@ -12,6 +12,133 @@
     <div class="govuk-grid-column-three-thirds">
       <p class="govuk-body">Select the DORS journey you would like to begin.</p>
 
+
+      <h2 class="govuk-heading-s">Current journeys to test.</h2>
+      {{ govukTable({
+            firstCellIsHeader: false,
+            head: [
+            {
+              text: "Journey"
+              },
+              {
+                text: "Actions"
+              },
+              {
+                text: "Description"
+              }
+            ],
+            rows: [
+                  [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Submitted Confirmation Email"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant_submitted_email"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The first email an applicant receives from DORS, confirming their application has been submitted."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Progress Notification Email - 14 Days"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/progress_notification_email-14-days"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-14-days\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when 14 days have passed but their application is not yet ready to view."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Progress Notification Email - 28 Days"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/progress_notification_email-28-days"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-28-days\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when 28 days have passed but their application is not yet ready to view."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Result Not Available Email"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/result_not_available_email"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/result_not_available_email\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "The email an applicant receives when their check has been completed however they cannot view the result online."
+                  }
+              ],
+              [
+              {
+                classes: "govuk-!-width-one-quarter",
+                  text: "Applicant Result (unclear, via sign in)"
+              },
+              {
+                classes: "govuk-!-width-one-quarter",
+                html:
+                  govukButton({
+                    text: "Start",
+                    href: "/applicant_submitted_email-nc"
+                  }) + "" +
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email-nc\")'>
+                        Copy Link
+                      </button>"
+                },
+                {
+                  classes: "govuk-!-width-one-half",
+                    text: "Full applicant journey from the submitted confirmation email through to signing in with GOV UK One Login, ending on the applicant result page with an unclear result."
+                  }
+              ]
+
+		  ]
+
+
+	  }) }}
+      <h2 class="govuk-heading-s">Active Journeys.</h2>
       {{ govukTable({
             firstCellIsHeader: false,
             head: [
