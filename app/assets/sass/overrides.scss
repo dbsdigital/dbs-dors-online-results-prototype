@@ -3,15 +3,43 @@
 }
 
 .vertical-align-bottom {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .govuk-service-navigation__service-name {
-    padding: 15px 0px 15px 0px;
-    line-height: 1.5;
+  padding: 15px 0px 15px 0px;
+  line-height: 1.5;
 }
 
 .govuk-service-navigation {
-    background-color: #f4f8fb;
-    border-bottom-color: #8eb8dc;
+  background-color: #f4f8fb;
+  border-bottom-color: #8eb8dc;
+}
+
+/* Disputes - Evidence File upload summary list status */
+// Override the default 30% key width
+.govuk-summary-list__key.app-summary-list__key--status {
+  width: 44px;
+  padding-right: govuk-spacing(3);
+  text-align: center;
+}
+
+.app-file-status {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  background-color: #0f7a52;
+  // Keeps a visible outline in Windows high contrast, where backgrounds get stripped
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.app-file-status--invalid {
+  background-color: #ca3535;
+}
+
+.app-file-error {
+  color: #ca3535;
 }

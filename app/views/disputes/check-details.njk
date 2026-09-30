@@ -1,0 +1,144 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: cms.key1
+            },
+            value: {
+              text: "David"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: commonCms.change,
+                  visuallyHiddenText: "contact details"
+                },
+                {
+                  href: "#",
+                  text: commonCms.remove,
+                  visuallyHiddenText: "contact details",
+                  classes: "app-link--remove"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.key2
+            },
+            value: {
+              text: "Bowie"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: commonCms.change,
+                  visuallyHiddenText: "contact details"
+                },
+                {
+                  href: "#",
+                  text: commonCms.remove,
+                  visuallyHiddenText: "contact details",
+                  classes: "app-link--remove"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.key3
+            },
+            value: {
+              text: "Brixton"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: commonCms.change,
+                  visuallyHiddenText: "contact details"
+                },
+                {
+                  href: "#",
+                  text: commonCms.remove,
+                  visuallyHiddenText: "contact details",
+                  classes: "app-link--remove"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.key4
+            },
+            value: {
+              text: "Crowdsurfing"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: commonCms.change,
+                  visuallyHiddenText: "contact details"
+                },
+                {
+                  href: "#",
+                  text: commonCms.remove,
+                  visuallyHiddenText: "contact details",
+                  classes: "app-link--remove"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        name: "whereDoYouLive",
+        fieldset: {
+          legend: {
+            text: cms.radio1,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: commonCms.yes
+          },
+          {
+            value: "no",
+            text: commonCms.no
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

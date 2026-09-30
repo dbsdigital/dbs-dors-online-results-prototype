@@ -1,0 +1,19 @@
+{
+  "en": {
+    "title": "Email address",
+    "h1": "Email address",
+    "p1": "We will only use your email address to send you updates about your dispute.",
+    "p2": "You can tell us at any time if you no longer want to receive these emails.",
+    "radio1": {
+      "label": "Is this email address correct?",
+      "item1": "Yes, use this email address to contact me about my dispute",
+      "item2": "No, I need to change it"
+    },
+    "textbox1": "Enter the correct email address",
+    "link1": "I do not want to receive emails about my dispute"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

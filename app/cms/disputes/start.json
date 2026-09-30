@@ -1,0 +1,60 @@
+{
+  "en": {
+    "title": "Dispute your DBS check result",
+    "h1": "Dispute your DBS check result",
+    "section1": {
+      "p1": "Use this service if information shown on your DBS result is incorrect and you want DBS to review it.",
+      "p2": "You can use this service to dispute:",
+      "ul": {
+        "li1": "incorrect personal details",
+        "li2": "missing conviction or caution information"
+      }
+    },
+    "section2": {
+      "h2": "What happens when you dispute a result",
+      "p1": "You'll be asked to:",
+      "ol": {
+        "li1": "tell us what information is wrong",
+        "li2": "explain why you believe it is incorrect",
+        "li3": "upload supporting evidence, where available",
+        "li4": "provide contact details so we can update you"
+      },
+      "p2": "DBS will review the information and contact you if further details are needed.",
+      "button": "Start now"
+    },
+    "section3": {
+      "h2": "Before you start",
+      "h3": "Check that the correct DBS check was requested",
+      "p1": "Do not use this service if you believe the wrong level or type of DBS check was applied for. For example, if an enhanced DBS check was requested for a role that does not qualify.",
+      "p2": "If you think the wrong DBS check has been carried out, contact the Registered Body or countersignatory who submitted your application. They will be able to advise on the next steps."
+    },
+    "section4": {
+      "h2": "What you’ll need",
+      "p1": "If you are disputing your criminal record or convictions, you can upload evidence to support this. For example:",
+      "ul": {
+        "li1": "details of any offences",
+        "li2": "the year of the offence",
+        "li3": "the name and dates of the court you attended"
+      }
+    },
+    "section5": {
+      "h2": "What you’ll need",
+      "p1": {
+        "text1": "You can also complete a",
+        "linkText1": "DBS certificate dispute form"
+      }
+    },
+    "section6": {
+      "h2": "Need help?",
+      "p1": {
+        "line1": "Email: RaiseDispute@dbs.gov.uk",
+        "line2": "Phone: 03000 200 190",
+        "line3": "Monday to Friday, 9am to 5pm (except public holidays)"
+      }
+    }
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

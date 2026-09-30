@@ -1,0 +1,103 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      <p>{{cms.p1}}</p>
+
+
+
+      {% set statusValidHtml %}
+        <span class="app-file-status app-file-status--valid">
+          <span class="govuk-visually-hidden">Valid file</span>
+        </span>
+      {% endset %}
+
+      {% set statusInvalidHtml %}
+        <span class="app-file-status app-file-status--invalid">
+          <span class="govuk-visually-hidden">Invalid file</span>
+        </span>
+      {% endset %}
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              html: statusValidHtml,
+              classes: "app-summary-list__key--status"
+            },
+            value: {
+              text: "Lorem ipsum upload.docx"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: "Remove",
+                  visuallyHiddenText: "Remove"
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              html: statusInvalidHtml,
+              classes: "app-summary-list__key--status"
+            },
+            value: {
+              html: "Testfile.xlsx <span class='govuk-error-message'>" + cms.warning1 + "</span>"
+            }
+          }
+        ]
+      }) }}
+
+
+
+
+
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        name: "radio1",
+        fieldset: {
+          legend: {
+            text: cms.radio1,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        hint: {
+          html: radioHintHtml
+        },
+        items: [
+          {
+            value: "yes",
+            text: commonCms.yes
+          },
+          {
+            value: "no",
+            text: commonCms.no
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

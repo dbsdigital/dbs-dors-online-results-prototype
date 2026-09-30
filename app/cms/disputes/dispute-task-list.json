@@ -1,0 +1,31 @@
+{
+  "en": {
+    "title": "Dispute information on your DBS check result",
+    "h1": "Dispute information on your DBS check result",
+    "section1": {
+      "title": "Applicant details",
+      "label1": "Name",
+      "label2": "Other/previous names",
+      "label3": "Date of birth",
+      "label4": "Place of birth",
+      "label5": "Address"
+    },
+    "section2": {
+      "title": "Position details",
+      "label1": "Post applied for"
+    },
+    "section3": {
+      "title": "Recorded details",
+      "label1": "Police records of convictions and cautions",
+      "label2": "DBS children’s barred list information",
+      "label3": "DBS adults’ barred list information"
+    },
+    "link1": "Dispute",
+    "noneRecorded": "None recorded",
+    "notRequested": "Not requested"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

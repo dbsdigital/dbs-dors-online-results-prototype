@@ -31,106 +31,85 @@
                   [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Submitted Confirmation Email"
+                  text: "Disputes Journey A - Personal details"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/applicant_submitted_email"
+                    href: "/disputes/start?variant=aPersonalInfo"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/start?variant=aPersonalInfo\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The first email an applicant receives from DORS, confirming their application has been submitted."
+                    text: "Disputes Journey A - Covering the personal details section"
                   }
               ],
-              [
+                  [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Progress Notification Email - 14 Days"
+                  text: "Disputes Journey A - Criminal record"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/progress_notification_email-14-days"
+                    href: "/disputes/start?variant=aCriminalRecord"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-14-days\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/start?variant=aCriminalRecord\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when 14 days have passed but their application is not yet ready to view."
+                    text: "Disputes Journey A - Covering the criminal record section"
                   }
               ],
-              [
+                  [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Progress Notification Email - 28 Days"
+                  text: "Disputes Journey A - Barred list"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/progress_notification_email-28-days"
+                    href: "/disputes/start?variant=aBarredList"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-28-days\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/start?variant=aBarredList\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when 28 days have passed but their application is not yet ready to view."
+                    text: "Disputes Journey A - Covering the barred list section"
                   }
               ],
-              [
+                  [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Result Not Available Email"
+                  text: "Disputes Journey B"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/result_not_available_email"
+                    href: "/disputes/start?variant=bName"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/result_not_available_email\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/start?variant=bName\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when their check has been completed however they cannot view the result online."
-                  }
-              ],
-              [
-              {
-                classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Result (unclear, via sign in)"
-              },
-              {
-                classes: "govuk-!-width-one-quarter",
-                html:
-                  govukButton({
-                    text: "Start",
-                    href: "/applicant_submitted_email-nc"
-                  }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email-nc\")'>
-                        Copy Link
-                      </button>"
-                },
-                {
-                  classes: "govuk-!-width-one-half",
-                    text: "Full applicant journey from the submitted confirmation email through to signing in with GOV UK One Login, ending on the applicant result page with an unclear result."
+                    text: "Disputes Journey B - Use of task list to allow the applicant to see the data they are disputing"
                   }
               ]
 

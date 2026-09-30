@@ -1,0 +1,59 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      {% set radioHintHtml %}
+      <p>{{cms.p1}}</p>
+
+      <div class="govuk-inset-text govuk-!-static-margin-left-5">
+        71 Star Street<br/>
+        Starsville<br/>
+        Starstown<br/>
+        ST410PT
+      </div>
+      {% endset %}
+
+      {{ govukRadios({
+        name: "radio1",
+        fieldset: {
+          legend: {
+            text: cms.h1,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          html: radioHintHtml
+        },
+        items: [
+          {
+            value: "yes",
+            text: cms.radio1.item1
+          },
+          {
+            value: "no",
+            text: cms.radio1.item2
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

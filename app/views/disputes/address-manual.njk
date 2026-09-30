@@ -1,0 +1,85 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      {% call govukFieldset({
+        legend: {
+          text: cms.h1,
+          classes: "govuk-fieldset__legend--l",
+          isPageHeading: true
+        }
+      }) %}
+
+      {{ govukInput({
+        label: { text: cms.textbox1 },
+        id: "address-line-1",
+        name: "addressLine1",
+        value: addressLine1,
+        autocomplete: "address-line1"
+      }) }}
+
+      {{ govukInput({
+        label: { text: cms.textbox2 },
+        id: "address-line-2",
+        name: "addressLine2",
+        autocomplete: "address-line2"
+      }) }}
+
+      {{ govukInput({
+        label: { text: cms.textbox3 },
+        classes: "govuk-!-width-two-thirds",
+        id: "address-town",
+        name: "addressTown",
+        value: addressTown,
+        autocomplete: "address-level2"
+      }) }}
+
+      {{ govukInput({
+        label: { text: cms.textbox4 },
+        classes: "govuk-!-width-two-thirds",
+        id: "address-county",
+        name: "addressCounty"
+      }) }}
+
+      {{ govukSelect({
+        id: "select1",
+        name: "select1",
+        label: {
+          text: cms.dropdown1
+        },
+        items: countryItems
+      }) }}
+
+      {{ govukInput({
+        label: { text: cms.textbox5 },
+        classes: "govuk-input--width-10",
+        id: "address-postcode",
+        name: "addressPostcode",
+        value: postcode,
+        autocomplete: "postal-code"
+      }) }}
+
+      {% endcall %}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

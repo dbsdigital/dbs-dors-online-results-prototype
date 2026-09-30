@@ -1,0 +1,19 @@
+{
+  "en": {
+    "title": "Which personal details are you disputing?",
+    "h1": "Which personal details are you disputing?",
+    "hint1": "Select all that apply.",
+    "items": {
+      "item1": "My name",
+      "item2": "My other/previous names",
+      "item3": "Address",
+      "item4": "Date of birth",
+      "item5": "Place of birth",
+      "item6": "Post applied for"
+    }
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "en": {
+    "title": "Enter your correct other/previous name",
+    "h1": "Enter your correct other/previous name",
+    "textbox1": "First name",
+    "textbox2": "Middle name(s)",
+    "textbox3": "Last name",
+    "date1": {
+      "label": "When did you start using this name?",
+      "hint": "For example, 2000"
+    },
+    "radio1": "Do you still use this name?",
+    "date2": {
+      "label": "When did you stop using this name?",
+      "hint": "For example, 2000"
+    }
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

@@ -1,0 +1,73 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/date-input/macro.njk" import govukDateInput %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      <p>{{cms.p1}}</p>
+      <p>{{cms.p2}}</p>
+
+      
+      {% set changeEmailHtml %}
+      {{ govukInput({
+        label: { text: cms.textbox1 },
+        id: "email",
+        name: "email",
+        type: "email",
+        autocomplete: "email",
+        spellcheck: false
+      }) }}
+      {% endset %}
+
+      {{ govukRadios({
+        name: "radio1",
+        fieldset: {
+          legend: {
+            text: cms.radio1.label,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        hint: {
+          text: "starman@gmail.com"
+        },
+        items: [
+          {
+            value: "yes",
+            text: cms.radio1.item1
+          },
+          {
+            value: "no",
+            text: cms.radio1.item2,
+            conditional: {
+              html: changeEmailHtml
+            }
+          }
+        ]
+      }) }}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: commonCms.continue,
+          href: "/disputes/declaration"
+        }) }}
+
+        <a href="{{nextPage}}" class="govuk-link">{{cms.link1}}</a>
+      </div>
+    </div>
+
+  </div>
+</div>{% endblock %}

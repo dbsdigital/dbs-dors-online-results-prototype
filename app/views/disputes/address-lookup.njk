@@ -1,0 +1,70 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      {{ govukInput({
+        label: { 
+          text: cms.textbox1
+        },
+        id: "textbox1",
+        name: "textbox1"
+      }) }}
+
+
+      {{ govukButton({
+        text: cms.button1,
+        href: "#",
+        classes: "govuk-button--secondary"
+      }) }}
+
+      {{ govukSelect({
+        id: "select1",
+        name: "select1",
+        label: {
+          text: cms.dropdown1
+        },
+        items: [
+        {
+          value: "choose",
+          text: "Select address",
+          selected: true
+        },
+        {
+          name: "item1",
+          text: "Address 1"
+        },
+        {
+          name: "item2",
+          text: "Address 2"
+        }
+        ]
+      }) }}
+
+      <p>2 {{cms.hint2}}</p>
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage + "?populated=true"
+      }) }}
+
+      <p class="govuk-body">
+        <a href="{{nextPage}}?populated=false" class="govuk-link">{{cms.link1}}</a>
+      </p>
+    </div>
+
+  </div>
+</div>{% endblock %}

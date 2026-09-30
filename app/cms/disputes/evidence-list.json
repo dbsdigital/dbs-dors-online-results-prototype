@@ -1,0 +1,13 @@
+{
+  "en": {
+    "title": "Your uploaded evidence",
+    "h1": "Your uploaded evidence",
+    "p1": "Below is a list of files you are sending to the DBS. You can remove any files you no longer want to send.",
+    "warning1": "File type must be .jpg .doc etc etc",
+    "radio1": "Do you need to add another file?"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

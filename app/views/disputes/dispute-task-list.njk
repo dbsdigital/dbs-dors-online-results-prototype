@@ -1,0 +1,205 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: cms.section1.title
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: cms.section1.label1
+            },
+            value: {
+              text: "David Bowie"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/name?variant=bName",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label2
+            },
+            value: {
+              html: "David Jones<br/>Ziggy Stardust<br/>Aladdin Sane"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/previous-name-list?variant=bPreviousName",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label3
+            },
+            value: {
+              text: "8 January 1947"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/dob?variant=bDob",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label4
+            },
+            value: {
+              text: "Brixton"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/birth-place?variant=bBirthPlace",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label5
+            },
+            value: {
+              html: "77 Starman Road<br/>London<br/>DB7 77S"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/address?variant=bAddress",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: cms.section2.title
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: cms.section2.label1
+            },
+            value: {
+              text: "Mechanic"
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/post-applied-for?variant=bPostAppliedFor",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: cms.section3.title
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: cms.section3.label1
+            },
+            value: {
+              text: cms.noneRecorded
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/criminal-record-info?variant=bCriminalRecord",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section3.label2
+            },
+            value: {
+              html: cms.notRequested
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/barred?variant=bBarred",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section3.label3
+            },
+            value: {
+              text: cms.noneRecorded
+            },
+            actions: {
+              items: [
+                {
+                  href: "/disputes/barred?variant=bBarred",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+</div>{% endblock %}

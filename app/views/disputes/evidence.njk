@@ -1,0 +1,66 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+      <p class="govuk-body">{{cms.p1}}</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-static-margin-left-5">
+        <li>{{cms.ul.li1}}</li>
+        <li>{{cms.ul.li2}}</li>
+        <li>{{cms.ul.li3}}</li>
+        <li>{{cms.ul.li4}}</li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">{{cms.h2}}</h2>
+      <p class="govuk-body">{{cms.p2}}</p>
+
+
+      {% call govukDetails({
+        summaryText: cms.details1.summaryText
+      }) %}
+        <p class="govuk-body">{{cms.details1.p1}}</p>
+        <ul class="govuk-list govuk-list--bullet govuk-!-static-margin-left-5">
+          <li>{{cms.details1.ul1.li1}}</li>
+          <li>{{cms.details1.ul1.li2}}</li>
+          <li>{{cms.details1.ul1.li3}}</li>
+        </ul>
+        <p class="govuk-body">{{cms.details1.p2}}</p>
+        <p class="govuk-body">{{cms.details1.p3}}</p>
+      {% endcall %}
+
+      {{ govukFileUpload({
+        id: "file-upload-1",
+        name: "fileUpload1",
+        label: {
+          text: cms.fileUpload
+        }
+      }) }}
+      
+      <h2 class="govuk-heading-m">{{cms.h3}}</h2>
+      <p>{{cms.p3}}</p>
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: cms.button1,
+          href: nextPage
+        }) }}
+
+        <a href="{{nextPage}}" class="govuk-link">{{cms.link1}}</a>
+      </div>
+    </div>
+
+  </div>
+</div>{% endblock %}

@@ -1,0 +1,16 @@
+{
+  "en": {
+    "title": "What do you want to dispute?",
+    "h1": "What do you want to dispute?",
+    "hint1": "Select all that apply.",
+    "items": {
+      "item1": "My personal details, for example my name",
+      "item2": "Criminal record or conviction information",
+      "item3": "Barred list information"
+    }
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

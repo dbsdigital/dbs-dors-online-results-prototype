@@ -1,0 +1,54 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+      <p>{{cms.section1.p1}}</p>
+      <p>{{cms.section1.p2}}</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-static-margin-left-5">
+        <li>{{cms.section1.ul.li1}}</li>
+        <li>{{cms.section1.ul.li2}}</li>
+      </ul>
+      <h2 class="govuk-heading-m">{{cms.section2.h2}}</h2>
+      <p>{{cms.section2.p1}}</p>
+      <ul class="govuk-list govuk-list--number govuk-!-static-margin-left-5">
+        <li>{{cms.section2.ol.li1}}</li>
+        <li>{{cms.section2.ol.li2}}</li>
+        <li>{{cms.section2.ol.li3}}</li>
+        <li>{{cms.section2.ol.li4}}</li>
+      </ul>
+      <p>{{cms.section2.p2}}</p>
+
+      {{ govukButton({
+        text: cms.section2.button,
+        href: nextPage,
+        isStartButton: true
+      }) }}
+      
+      <h2 class="govuk-heading-m">{{cms.section3.h2}}</h2>
+      <h3 class="govuk-heading-s">{{cms.section3.h3}}</h3>
+      <p>{{cms.section3.p1}}</p>
+      <p>{{cms.section3.p2}}</p>
+      
+      <h2 class="govuk-heading-m">{{cms.section4.h2}}</h2>
+      <p>{{cms.section4.p1}}</p>
+      <ul class="govuk-list govuk-list--bullet govuk-!-static-margin-left-5">
+        <li>{{cms.section4.ul.li1}}</li>
+        <li>{{cms.section4.ul.li2}}</li>
+        <li>{{cms.section4.ul.li3}}</li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">{{cms.section5.h2}}</h2>
+      <p>{{cms.section5.p1.text1}} <a href="#" class="govuk-link">{{cms.section5.p1.linkText1}}</a>.</p>
+      
+      <h2 class="govuk-heading-m">{{cms.section6.h2}}</h2>
+      <p>{{cms.section6.p1.line1}}<br/>
+      {{cms.section6.p1.line2}}<br/>
+      {{cms.section6.p1.line3}}</p>
+    </div>
+
+  </div>
+</div>{% endblock %}

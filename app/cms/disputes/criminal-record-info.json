@@ -1,0 +1,15 @@
+{
+  "en": {
+    "title": "Enter your missing criminal record information or conviction",
+    "h1": "Enter your missing criminal record information or conviction",
+    "p1": "Provide as much information as you can. If some details are unavailable or unknown, you can still submit your dispute.",
+    "textbox1": "Name of offence or conviction",
+    "date1": "Year of offence, for example 2014",
+    "textbox2": "Court attended",
+    "date2": "Date attended court, for example 28 7 2012"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

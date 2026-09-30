@@ -1,0 +1,53 @@
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+{% from "one_login/header/service-header.njk" import govukOneLoginServiceHeader %}
+{% from "hmrc/components/language-select/macro.njk" import hmrcLanguageSelect %}
+{% extends "govuk-prototype-kit/layouts/unbranded.njk" %}
+
+{% block head %}
+  {% include "includes/head.njk" %}
+{% endblock %}
+
+{% block pageTitle %}
+  {{cms.title}} – DORS Prototype
+{% endblock %}
+
+<!-- Override default header with gov uk one login header -->
+{% block header %}
+  {% set navItems = [{
+      }] %}
+
+  {{ govukOneLoginServiceHeader({
+    rebrand: true,
+    serviceNavigationParams:
+    {
+      serviceName: commonCms.navBar.serviceText.disputes,
+      navigation: navItems
+    },
+    signOutLink: "/sign-out",
+    signOutText: commonCms.navBar.signOut,
+    oneLoginLink: "#"
+  }) }}
+{% endblock %}
+
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: commonCms.headerText.bannerPhase
+    },
+    html: commonCms.headerText.bannerText
+  }) }}
+
+  {{
+    hmrcLanguageSelect({
+      language: 'cy' if data['lang'] === 'cy' else 'en',
+      en: { href: '?lang=en' },
+      cy: { href: '?lang=cy' }
+    })
+  }}
+
+{% endblock %}
+
+{% block footer %}
+{% include "footer.njk" %}{% endblock %}

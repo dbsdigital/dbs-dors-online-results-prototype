@@ -1,0 +1,74 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: cms.label1
+            },
+            value: {
+              text: "David Bowie"
+            },
+            actions: {
+              items: [
+                {
+                  href: nextPage,
+                  text: cms.action1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.label1
+            },
+            value: {
+              text: "Ziggy Stardust"
+            },
+            actions: {
+              items: [
+                {
+                  href: nextPage,
+                  text: cms.action1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.label1
+            },
+            value: {
+              text: "Aladdin Sane"
+            },
+            actions: {
+              items: [
+                {
+                  href: nextPage,
+                  text: cms.action1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

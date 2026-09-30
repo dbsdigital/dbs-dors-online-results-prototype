@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "What is your address?",
+    "h1": "What is your address?",
+    "textbox1": "UK postcode",
+    "button1": "Look up address",
+    "hint2": "addresses found",
+    "link1": "If address is not listed, enter it manually"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

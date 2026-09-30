@@ -1,0 +1,35 @@
+{
+  "en": {
+    "title": "Supporting evidence",
+    "h1": "Supporting evidence",
+    "p1": "Please upload any supporting evidence that shows you have a criminal record or conviction. This could include:",
+    "ul": {
+      "li1": "court documents",
+      "li2": "police paperwork",
+      "li3": "an old DBS certificate",
+      "li4": "any other official documents relating to the offence"
+    },
+    "h2": "Select files for upload",
+    "p2": "Select the files you want to upload. You can select a maximum of X files.",
+    "fileUpload": "Upload a file",
+    "details1": {
+      "summaryText": "File types you can upload",
+      "p1": "Your files must:",
+      "ul1": {
+        "li1": "Be smaller than 10MB each",
+        "li2": "Have filenames that are unique and contain only letters A to Z, numbers, full stops, spaces, underscores, hyphens and round brackets",
+        "li3": "Have filenames that end with PDF, DOC, DOCX, JPEG, JPG, PNG, CSV, TXT, TIF, XLS, XLSX, ODT, ODP, or ODSs"
+      },
+      "p2": "Your files must not be password protected or edited using software like Photoshop, as these may be rejected.",
+      "p3": "You can only upload 100MB at a time."
+    },
+    "h3": "Files to be uploaded",
+    "p3": "No files selected.",
+    "button1": "Upload files",
+    "link1": "I have no files to upload"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

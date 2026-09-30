@@ -1,0 +1,60 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+{% from "govuk/components/select/macro.njk" import govukSelect %}
+{% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      {% call govukFieldset({
+        legend: {
+          text: cms.h1,
+          classes: "govuk-fieldset__legend--l",
+          isPageHeading: true
+        }
+      }) %}
+
+      {{ govukInput({
+        label: { text: cms.textbox1 },
+        classes: "govuk-!-width-two-thirds",
+        id: "address-town",
+        name: "addressTown",
+        autocomplete: "address-level2"
+      }) }}
+
+      {{ govukInput({
+        label: { text: cms.textbox2 },
+        classes: "govuk-!-width-two-thirds",
+        id: "address-county",
+        name: "addressCounty"
+      }) }}
+
+      {{ govukSelect({
+        id: "select1",
+        name: "select1",
+        label: {
+          text: cms.dropdown1
+        },
+        items: countryItems
+      }) }}
+
+      {% endcall %}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

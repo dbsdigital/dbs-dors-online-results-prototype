@@ -1,0 +1,14 @@
+{
+  "en": {
+    "title": "Why did you expect this criminal record information or conviction to appear?",
+    "textarea": {
+      "label": "Why did you expect this criminal record information or conviction to appear?",
+      "hint": "Explain why you believe this information is missing from your DBS check result. You can upload supporting evidence, for example court documents, on the next page."
+    },
+    "radio1": "Do you have any other criminal record information or convictions to dispute?"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}
