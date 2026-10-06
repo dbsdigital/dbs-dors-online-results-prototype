@@ -16,101 +16,124 @@
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-l">{{cms.h1}}</h1>
 
+
+      {% set nameRow = {
+        key: { text: cms.key1 },
+        value: { text: "David Bowie" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set otherNamesRow = {
+        key: { text: cms.key2 },
+        value: { html: "David Bowie (2000 to current)<br/>Ziggy Stardust (1972 to 1973)<br/>Aladdin Sane (1973 to 1973)" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set addressRow = {
+        key: { text: cms.key3 },
+        value: { html: "71 Star Street<br/>Starsville<br/>Starstown<br/>ST41 0PT" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set dobRow = {
+        key: { text: cms.key4 },
+        value: { text: "8 January 1947" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set birthPlaceRow = {
+        key: { text: cms.key5 },
+        value: { html: "London<br/>United Kingdom" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set postAppliedForRow = {
+        key: { text: cms.key6 },
+        value: { html: "Teacher" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set criminalRecordRow = {
+        key: { text: cms.key7 },
+        value: { html: "<strong>Name of offence or conviction</strong><br/> Exceeding a statutory speed limit on a public road<br/><strong>Year of offence</strong><br/> 2014<br/><strong>Court attended</strong><br/> Liverpool Crown Court<br/><strong>Date attended court</strong><br/> 28 7 2012" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set criminalRecordRow2 = {
+        key: { text: cms.key8 },
+        value: { html: "Reason tbc" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set barredListRow = {
+        key: { text: cms.key9 },
+        value: { html: "Children's barred list" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set barredListRow2 = {
+        key: { text: cms.key10 },
+        value: { html: "Reason tbc" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set evidenceRow = {
+        key: { text: cms.key11 },
+        value: { html: "Lorem ipsum upload.docx" },
+        actions: { items: [{ href: "#", text: commonCms.change, visuallyHiddenText: "change" },
+                { href: "#", text: commonCms.remove, visuallyHiddenText: "remove", classes: "app-link--remove"}] }
+      } %}
+
+      {% set rows = [] %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo2", "bName"] %}
+        {% set rows = rows.concat([nameRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo1", "aPersonalInfo3", "bPreviousName"] %}
+        {% set rows = rows.concat([otherNamesRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo1", "bAddress"] %}
+        {% set rows = rows.concat([addressRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo2", "bDob"] %}
+        {% set rows = rows.concat([dobRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo2", "aPersonalInfo4", "bBirthPlace"] %}
+        {% set rows = rows.concat([birthPlaceRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo1", "bPostAppliedFor"] %}
+        {% set rows = rows.concat([postAppliedForRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aCriminalRecord", "bCriminalRecord"] %}
+        {% set rows = rows.concat([criminalRecordRow]) %}
+        {% set rows = rows.concat([criminalRecordRow2]) %}
+        {% set rows = rows.concat([evidenceRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aBarredList", "bBarred"] %}
+        {% set rows = rows.concat([barredListRow]) %}
+        {% set rows = rows.concat([barredListRow2]) %}
+        {% set rows = rows.concat([evidenceRow]) %}
+      {% endif %}
+
       {{ govukSummaryList({
-        rows: [
-          {
-            key: {
-              text: cms.key1
-            },
-            value: {
-              text: "David"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: commonCms.change,
-                  visuallyHiddenText: "contact details"
-                },
-                {
-                  href: "#",
-                  text: commonCms.remove,
-                  visuallyHiddenText: "contact details",
-                  classes: "app-link--remove"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: cms.key2
-            },
-            value: {
-              text: "Bowie"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: commonCms.change,
-                  visuallyHiddenText: "contact details"
-                },
-                {
-                  href: "#",
-                  text: commonCms.remove,
-                  visuallyHiddenText: "contact details",
-                  classes: "app-link--remove"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: cms.key3
-            },
-            value: {
-              text: "Brixton"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: commonCms.change,
-                  visuallyHiddenText: "contact details"
-                },
-                {
-                  href: "#",
-                  text: commonCms.remove,
-                  visuallyHiddenText: "contact details",
-                  classes: "app-link--remove"
-                }
-              ]
-            }
-          },
-          {
-            key: {
-              text: cms.key4
-            },
-            value: {
-              text: "Crowdsurfing"
-            },
-            actions: {
-              items: [
-                {
-                  href: "#",
-                  text: commonCms.change,
-                  visuallyHiddenText: "contact details"
-                },
-                {
-                  href: "#",
-                  text: commonCms.remove,
-                  visuallyHiddenText: "contact details",
-                  classes: "app-link--remove"
-                }
-              ]
-            }
-          }
-        ]
+        rows: rows
       }) }}
 
       {{ govukRadios({

@@ -11,16 +11,34 @@ const checkDetailsOnwards = [
   "sent",
 ];
 module.exports = {
-  aPersonalInfo: [
+  aPersonalInfo1: [
     ...journeyAStart,
     "which-personal-details",
-    "name",
     "previous-name-list",
     "previous-name",
     "address",
+    "post-applied-for",
+    ...checkDetailsOnwards,
+  ],
+  aPersonalInfo2: [
+    ...journeyAStart,
+    "which-personal-details",
+    "name",
     "dob",
     "birth-place",
-    "post-applied-for",
+    ...checkDetailsOnwards,
+  ],
+  aPersonalInfo3: [
+    ...journeyAStart,
+    "which-personal-details",
+    "previous-name-list",
+    "previous-name",
+    ...checkDetailsOnwards,
+  ],
+  aPersonalInfo4: [
+    ...journeyAStart,
+    "which-personal-details",
+    "birth-place",
     ...checkDetailsOnwards,
   ],
   aCriminalRecord: [
@@ -66,4 +84,5 @@ module.exports = {
     ...evidenceJourney,
     ...checkDetailsOnwards,
   ],
+  checkDetailsFullDataset: [...checkDetailsOnwards],
 };
