@@ -1,18 +1,21 @@
 {
   "en": {
-    "title": "Check your information before sending your dispute",
-    "h1": "Check your information before sending your dispute",
+    "title": "Check your dispute information",
+    "h1": "Check your dispute information",
     "key1": "Name",
     "key2": "Other/previous names",
     "key3": "Address",
     "key4": "Date of birth",
     "key5": "Place of birth",
     "key6": "Post applied for",
-    "key7": "Missing criminal record information or conviction",
-    "key8": "Why did you expect this criminal record information or conviction to appear?",
+    "key7": "Name of offence or conviction",
+    "key8": "Year of offence",
     "key9": "Which barred list did you expect to see?",
     "key10": "Why do you think barred list information should appear?",
     "key11": "Supporting evidence",
+    "key12": "Court attended",
+    "key13": "Date attended court",
+    "key14": "Why did you expect this criminal record information to appear?",
     "radio1": "Do you need to dispute anything else on your DBS check result?"
   },
   "cy": {

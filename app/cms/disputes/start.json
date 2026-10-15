@@ -7,7 +7,8 @@
       "p2": "You can use this service to dispute:",
       "ul": {
         "li1": "incorrect personal details",
-        "li2": "missing conviction or caution information"
+        "li2": "missing conviction or caution information",
+        "li3": "missing barred list information"
       }
     },
     "section2": {
@@ -25,12 +26,12 @@
     "section3": {
       "h2": "Before you start",
       "h3": "Check that the correct DBS check was requested",
-      "p1": "Do not use this service if you believe the wrong level or type of DBS check was applied for. For example, if an enhanced DBS check was requested for a role that does not qualify.",
+      "p1": "Do not use this service if you believe the wrong level or type of DBS check was applied for. For example, if an enhanced DBS check was requested for a role that does not qualify, or you think you should have had a barred list check and did not.",
       "p2": "If you think the wrong DBS check has been carried out, contact the Registered Body or countersignatory who submitted your application. They will be able to advise on the next steps."
     },
     "section4": {
       "h2": "What you’ll need",
-      "p1": "If you are disputing your criminal record or convictions, you can upload evidence to support this. For example:",
+      "p1": "If you are disputing your criminal record information, you can upload evidence to support this. For example:",
       "ul": {
         "li1": "details of any offences",
         "li2": "the year of the offence",

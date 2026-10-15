@@ -5,6 +5,25 @@
 {% from "govuk/components/details/macro.njk" import govukDetails %}
 {% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
+{% if variant == "bPrevNameAndCriminalRecord" and data.otherNameDisputed != "true" %}
+  {% set otherNameLink = nextPage %}
+{% else %}
+  {% set otherNameLink = "#" %}
+{% endif %}
+
+{% set criminalRecordLink = "#" %}
+
+{% if variant == "bPrevNameAndCriminalRecord" and data.otherNameDisputed == "true" %}
+  {% set criminalRecordLink = nextPage %}
+  {% set otherNameHtml %}
+  David Jones<br/>Ziggy Stardust<br/>David Jones <strong class="govuk-tag govuk-tag--red">Disputed</strong>
+  {% endset %}
+{% else %}
+  {% set otherNameHtml %}
+  David Jones<br/>Ziggy Stardust<br/>Aladdin Sane
+  {% endset %}
+{% endif %}
+
 {% block beforeContent %}
   {{ govukBackLink({
     text: commonCms.backlink,
@@ -35,7 +54,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/name?variant=bName",
+                  href: "#",
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -47,12 +66,12 @@
               text: cms.section1.label2
             },
             value: {
-              html: "David Jones<br/>Ziggy Stardust<br/>Aladdin Sane"
+              html: otherNameHtml
             },
             actions: {
               items: [
                 {
-                  href: "/disputes/previous-name-list?variant=bPreviousName",
+                  href: otherNameLink,
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -69,7 +88,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/dob?variant=bDob",
+                  href: "#",
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -86,7 +105,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/birth-place?variant=bBirthPlace",
+                  href: "#",
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -103,7 +122,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/address?variant=bAddress",
+                  href: "#",
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -112,6 +131,12 @@
           }
         ]
       }) }}
+
+      {% if variant == "bPostAppliedFor" %}
+        {% set postLink = nextPage %}
+      {% else %}
+        {% set postLink = "#" %}
+      {% endif %}
 
       {{ govukSummaryList({
         card: {
@@ -130,7 +155,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/post-applied-for?variant=bPostAppliedFor",
+                  href: postLink,
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -157,7 +182,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/criminal-record-info?variant=bCriminalRecord",
+                  href: criminalRecordLink,
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -174,7 +199,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/barred?variant=bBarred",
+                  href: "#",
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }
@@ -191,7 +216,7 @@
             actions: {
               items: [
                 {
-                  href: "/disputes/barred?variant=bBarred",
+                  href: "#",
                   text: cms.link1,
                   visuallyHiddenText: cms.link1
                 }

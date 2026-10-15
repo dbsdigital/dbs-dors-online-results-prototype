@@ -1,88 +1,39 @@
-const journeyAStart = ["start", "what-to-dispute"];
-const journeyBStart = ["start", "dispute-task-list"];
-const evidenceJourney = ["evidence", "evidence-list"];
-const checkDetailsOnwards = [
-  "check-details",
-  "email",
-  "is-address-correct",
-  "address-lookup",
-  "address-manual",
-  "declaration",
-  "sent",
+const journeyAStart = ["result", "start", "what-to-dispute"];
+const journeyBStart = ["result", "start", "dispute-task-list"];
+const previousNameJourney = [
+  "previous-name-list",
+  "previous-name",
+  "another-previous-name",
 ];
+const criminalRecordJourney = [
+  "criminal-record-info",
+  "criminal-record-reason",
+  "evidence",
+];
+const checkDetailsOnwards = ["check-details", "email", "declaration", "sent"];
 module.exports = {
-  aPersonalInfo1: [
+  aPostAppliedFor: [
     ...journeyAStart,
-    "which-personal-details",
-    "previous-name-list",
-    "previous-name",
-    "address",
     "post-applied-for",
     ...checkDetailsOnwards,
   ],
-  aPersonalInfo2: [
-    ...journeyAStart,
-    "which-personal-details",
-    "name",
-    "dob",
-    "birth-place",
-    ...checkDetailsOnwards,
-  ],
-  aPersonalInfo3: [
-    ...journeyAStart,
-    "which-personal-details",
-    "previous-name-list",
-    "previous-name",
-    ...checkDetailsOnwards,
-  ],
-  aPersonalInfo4: [
-    ...journeyAStart,
-    "which-personal-details",
-    "birth-place",
-    ...checkDetailsOnwards,
-  ],
-  aCriminalRecord: [
-    ...journeyAStart,
-    "criminal-record-info",
-    "criminal-record-reason",
-    ...evidenceJourney,
-    ...checkDetailsOnwards,
-  ],
-  aBarredList: [
-    ...journeyAStart,
-    "barred",
-    "barred-info",
-    ...evidenceJourney,
-    ...checkDetailsOnwards,
-  ],
-  bName: [...journeyBStart, "name", ...checkDetailsOnwards],
-  bPreviousName: [
-    ...journeyBStart,
-    "previous-name-list",
-    "previous-name",
-    ...checkDetailsOnwards,
-  ],
-  bDob: [...journeyBStart, "dob", ...checkDetailsOnwards],
-  bBirthPlace: [...journeyBStart, "birth-place", ...checkDetailsOnwards],
-  bAddress: [...journeyBStart, "address", ...checkDetailsOnwards],
   bPostAppliedFor: [
     ...journeyBStart,
     "post-applied-for",
     ...checkDetailsOnwards,
   ],
-  bCriminalRecord: [
-    ...journeyBStart,
-    "criminal-record-info",
-    "criminal-record-reason",
-    ...evidenceJourney,
+  aPrevNameAndCriminalRecord: [
+    ...journeyAStart,
+    ...previousNameJourney,
+    ...criminalRecordJourney,
     ...checkDetailsOnwards,
   ],
-  bBarred: [
+  bPrevNameAndCriminalRecord: [
     ...journeyBStart,
-    "barred",
-    "barred-info",
-    ...evidenceJourney,
+    ...previousNameJourney,
+    "check-details-1",
+    "dispute-task-list-2",
+    ...criminalRecordJourney,
     ...checkDetailsOnwards,
   ],
-  checkDetailsFullDataset: [...checkDetailsOnwards],
 };

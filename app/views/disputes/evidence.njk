@@ -55,10 +55,14 @@
       <div class="govuk-button-group">
         {{ govukButton({
           text: cms.button1,
-          href: nextPage
+          href: "#"
         }) }}
 
-        <a href="{{nextPage}}" class="govuk-link">{{cms.link1}}</a>
+        {{ govukButton({
+          text: cms.link1,
+          classes: "govuk-button--secondary",
+          href: nextPage
+        }) }}
       </div>
     </div>
 

@@ -4,6 +4,7 @@
 {% from "govuk/components/input/macro.njk" import govukInput %}
 {% from "govuk/components/date-input/macro.njk" import govukDateInput %}
 {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
 
 {% block beforeContent %}
   {{ govukBackLink({
@@ -20,6 +21,19 @@
 
       <p>{{cms.p1}}</p>
       <p>{{cms.p2}}</p>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: cms.currentEmail
+            },
+            value: {
+              text: "starman@gmail.com"
+            }
+          }
+        ]
+      }) }}
 
       
       {% set changeEmailHtml %}
@@ -42,7 +56,7 @@
           }
         },
         hint: {
-          text: "starman@gmail.com"
+          text: cms.radio1.hint
         },
         items: [
           {
@@ -62,10 +76,14 @@
       <div class="govuk-button-group">
         {{ govukButton({
           text: commonCms.continue,
-          href: "/disputes/declaration"
+          href: nextPage
         }) }}
 
-        <a href="{{nextPage}}" class="govuk-link">{{cms.link1}}</a>
+        {{ govukButton({
+          text: cms.button2,
+          classes: "govuk-button--secondary",
+          href: "#"
+        }) }}
       </div>
     </div>
 

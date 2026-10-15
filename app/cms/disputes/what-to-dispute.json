@@ -4,9 +4,14 @@
     "h1": "What do you want to dispute?",
     "hint1": "Select all that apply.",
     "items": {
-      "item1": "My personal details, for example my name",
-      "item2": "Criminal record or conviction information",
-      "item3": "Barred list information"
+      "item1": "My current name",
+      "item2": "My other/previous names",
+      "item3": "Address",
+      "item4": "Date of birth",
+      "item5": "Place of birth",
+      "item6": "Post applied for",
+      "item7": "Missing criminal record or conviction information",
+      "item8": "Missing barred list information"
     }
   },
   "cy": {
