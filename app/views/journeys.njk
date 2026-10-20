@@ -31,112 +31,88 @@
                   [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Submitted Confirmation Email"
+                  html: "Disputes Journey A<br/>Post applied for"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/applicant_submitted_email"
+                    href: "/disputes/result?variant=aPostAppliedFor&disputeResultVariant=a"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/result?variant=aPostAppliedFor&disputeResultVariant=a\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The first email an applicant receives from DORS, confirming their application has been submitted."
+                    text: "Disputes Journey A - Dispute 'Post applied for' only"
                   }
               ],
-              [
+                  [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Progress Notification Email - 14 Days"
+                  html: "Disputes Journey B<br/>Post applied for"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/progress_notification_email-14-days"
+                    href: "/disputes/result?variant=bPostAppliedFor&disputeResultVariant=b"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-14-days\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/result?variant=bPostAppliedFor&disputeResultVariant=b\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when 14 days have passed but their application is not yet ready to view."
+                    text: "Disputes Journey B - Dispute 'Post applied for' only"
                   }
               ],
-              [
+                  [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Progress Notification Email - 28 Days"
+                  html: "Disputes Journey A<br/>Previous name and criminal record"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/progress_notification_email-28-days"
+                    href: "/disputes/result?variant=aPrevNameAndCriminalRecord&disputeResultVariant=a"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/progress_notification_email-28-days\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/result?variant=aPrevNameAndCriminalRecord&disputeResultVariant=a\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when 28 days have passed but their application is not yet ready to view."
+                    text: "Disputes Journey A - Dispute Other Name and add in missing criminal record information (no evidence to upload)"
                   }
               ],
-              [
+                  [
               {
                 classes: "govuk-!-width-one-quarter",
-                  text: "Result Not Available Email"
+                  html: "Disputes Journey B<br/>Previous name and criminal record"
               },
               {
                 classes: "govuk-!-width-one-quarter",
                 html:
                   govukButton({
                     text: "Start",
-                    href: "/result_not_available_email"
+                    href: "/disputes/result?variant=bPrevNameAndCriminalRecord&disputeResultVariant=b"
                   }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/result_not_available_email\")'>
+                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/disputes/result?variant=bPrevNameAndCriminalRecord&disputeResultVariant=b\")'>
                         Copy Link
                       </button>"
                 },
                 {
                   classes: "govuk-!-width-one-half",
-                    text: "The email an applicant receives when their check has been completed however they cannot view the result online."
-                  }
-              ],
-              [
-              {
-                classes: "govuk-!-width-one-quarter",
-                  text: "Applicant Result (unclear, via sign in)"
-              },
-              {
-                classes: "govuk-!-width-one-quarter",
-                html:
-                  govukButton({
-                    text: "Start",
-                    href: "/applicant_submitted_email-nc"
-                  }) + "" +
-                    "<button class='govuk-button govuk-button--secondary center' onclick='navigator.clipboard.writeText(\"https://dbs-or-alpha.herokuapp.com/applicant_submitted_email-nc\")'>
-                        Copy Link
-                      </button>"
-                },
-                {
-                  classes: "govuk-!-width-one-half",
-                    text: "Full applicant journey from the submitted confirmation email through to signing in with GOV UK One Login, ending on the applicant result page with an unclear result."
+                    text: "Disputes Journey B - Dispute Other Name and add in missing criminal record information (no evidence to upload)"
                   }
               ]
-
-		  ]
-
-
+          ]
 	  }) }}
       <h2 class="govuk-heading-s">Active Journeys.</h2>
       {{ govukTable({

@@ -1,0 +1,226 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+  {% set otherNameLink = "#" %}
+  {% set criminalRecordLink = nextPage %}
+
+  {% set otherNameHtml %}
+  David Jones<br/>Ziggy Stardust<br/>David Jones <strong class="govuk-tag govuk-tag--red">Disputed</strong>
+  {% endset %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: cms.section1.title
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: cms.section1.label1
+            },
+            value: {
+              text: "David Bowie"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label2
+            },
+            value: {
+              html: otherNameHtml
+            },
+            actions: {
+              items: [
+                {
+                  href: otherNameLink,
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label3
+            },
+            value: {
+              text: "8 January 1947"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label4
+            },
+            value: {
+              text: "Brixton"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section1.label5
+            },
+            value: {
+              html: "77 Starman Road<br/>London<br/>DB7 77S"
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {% if variant == "bPostAppliedFor" %}
+        {% set postLink = nextPage %}
+      {% else %}
+        {% set postLink = "#" %}
+      {% endif %}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: cms.section2.title
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: cms.section2.label1
+            },
+            value: {
+              text: "Mechanic"
+            },
+            actions: {
+              items: [
+                {
+                  href: postLink,
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      {{ govukSummaryList({
+        card: {
+          title: {
+            text: cms.section3.title
+          }
+        },
+        rows: [
+          {
+            key: {
+              text: cms.section3.label1
+            },
+            value: {
+              text: cms.noneRecorded
+            },
+            actions: {
+              items: [
+                {
+                  href: criminalRecordLink,
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section3.label2
+            },
+            value: {
+              html: cms.notRequested
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          },
+          {
+            key: {
+              text: cms.section3.label3
+            },
+            value: {
+              text: cms.noneRecorded
+            },
+            actions: {
+              items: [
+                {
+                  href: "#",
+                  text: cms.link1,
+                  visuallyHiddenText: cms.link1
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+    </div>
+</div>
+
+{{ govukButton({
+  text: cms.button1,
+  href: backLink,
+  classes: "govuk-button--secondary"
+}) }}
+
+{% endblock %}

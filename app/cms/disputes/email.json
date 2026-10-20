@@ -1,0 +1,21 @@
+{
+  "en": {
+    "title": "Email address",
+    "h1": "Email address",
+    "p1": "The disputes team will contact you by email about your dispute.",
+    "p2": "You can tell them at any time if you no longer want to receive these emails.",
+    "currentEmail": "Your email address",
+    "radio1": {
+      "label": "Is this email address correct?",
+      "hint": "Changing your email address only updates the contact details we use for this dispute.",
+      "item1": "Yes, use this email address to contact me about my dispute",
+      "item2": "No, I need to change it"
+    },
+    "textbox1": "Enter the correct email address",
+    "button2": "Contact me by post"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

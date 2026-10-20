@@ -1,0 +1,13 @@
+{
+  "en": {
+    "title": "Enter your correct place of birth",
+    "h1": "Enter your correct place of birth",
+    "textbox1": "Town or city",
+    "textbox2": "County (optional)",
+    "dropdown1": "Country"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

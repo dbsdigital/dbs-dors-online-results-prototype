@@ -1,0 +1,182 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">{{cms.h1}}</h1>
+
+
+      {% set nameRow = {
+        key: { text: cms.key1 },
+        value: { text: "David Bowie" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set otherNamesRow = {
+        key: { text: cms.key2 },
+        value: { html: "David Jones<br/>1967 - 1999" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set addressRow = {
+        key: { text: cms.key3 },
+        value: { html: "71 Star Street<br/>Starsville<br/>Starstown<br/>ST41 0PT" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set dobRow = {
+        key: { text: cms.key4 },
+        value: { text: "8 January 1947" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set birthPlaceRow = {
+        key: { text: cms.key5 },
+        value: { html: "London<br/>United Kingdom" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set postAppliedForRow = {
+        key: { text: cms.key6 },
+        value: { html: "Musician" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set criminalRecordRow = {
+        key: { text: cms.key7 },
+        value: { html: "Crowdsurfing" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set criminalRecordRow2 = {
+        key: { text: cms.key8 },
+        value: { html: "1999" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set criminalRecordRow3 = {
+        key: { text: cms.key12 },
+        value: { html: "Wimbledon Magistrates' Court" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set criminalRecordRow4 = {
+        key: { text: cms.key13 },
+        value: { html: "16 July 2000" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set criminalRecordRow5 = {
+        key: { text: cms.key14 },
+        value: { html: "Crowdsurfing - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae eleifend magna, ultricies luctus libero. Pellentesque sagittis efficitur varius. Morbi rutrum nunc id mauris auctor, nec faucibus magna posuere. Donec eget consequat dolor. Nam ac malesuada nibh, sed varius ligula. Vestibulum sit amet nisl non orci blandit ullamcorper. Sed odio nisi, interdum vel facilisis a, accumsan id justo. Suspendisse potenti. Aliquam in vulputate lorem, ut pretium justo. Mauris ac purus fermentum, rhoncus felis sit amet, suscipit felis. Nullam in sapien sit amet nibh cursus vestibulum sit amet at nisi. Ut convallis maximus consectetur. " },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set barredListRow = {
+        key: { text: cms.key9 },
+        value: { html: "Children's barred list" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set barredListRow2 = {
+        key: { text: cms.key10 },
+        value: { html: "Reason tbc" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set evidenceRow = {
+        key: { text: cms.key11 },
+        value: { html: "Lorem ipsum upload.docx" },
+        actions: { items: [{ href: "#", text: commonCms.remove, visuallyHiddenText: "remove"}] }
+      } %}
+
+      {% set rows = [] %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo2", "bName"] %}
+        {% set rows = rows.concat([nameRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo1", "aPersonalInfo3", "bPreviousName", "aPrevNameAndCriminalRecord", "bPrevNameAndCriminalRecord"] %}
+        {% set rows = rows.concat([otherNamesRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo1", "bAddress"] %}
+        {% set rows = rows.concat([addressRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo2", "bDob"] %}
+        {% set rows = rows.concat([dobRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo2", "aPersonalInfo4", "bBirthPlace"] %}
+        {% set rows = rows.concat([birthPlaceRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aPersonalInfo1", "bPostAppliedFor", "aPostAppliedFor"] %}
+        {% set rows = rows.concat([postAppliedForRow]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aCriminalRecord", "bCriminalRecord", "aPrevNameAndCriminalRecord"] %}
+        {% set rows = rows.concat([criminalRecordRow]) %}
+        {% set rows = rows.concat([criminalRecordRow2]) %}
+        {% set rows = rows.concat([criminalRecordRow3]) %}
+        {% set rows = rows.concat([criminalRecordRow4]) %}
+        {% set rows = rows.concat([criminalRecordRow5]) %}
+      {% endif %}
+
+      {% if variant in ["checkDetailsFullDataset", "aBarredList", "bBarred"] %}
+        {% set rows = rows.concat([barredListRow]) %}
+        {% set rows = rows.concat([barredListRow2]) %}
+        {% set rows = rows.concat([evidenceRow]) %}
+      {% endif %}
+
+      {{ govukSummaryList({
+        rows: rows
+      }) }}
+
+      {{ govukRadios({
+        classes: "govuk-radios--inline",
+        name: "whereDoYouLive",
+        fieldset: {
+          legend: {
+            text: cms.radio1,
+            classes: "govuk-fieldset__legend--m"
+          }
+        },
+        items: [
+          {
+            value: "yes",
+            text: commonCms.yes
+          },
+          {
+            value: "no",
+            text: commonCms.no
+          }
+        ]
+      }) }}
+
+      {% if variant == "bPrevNameAndCriminalRecord" %}
+        {% set continueLink = nextPage + "?otherNameDisputed=true" %}
+      {% else %}
+        {% set continueLink = nextPage %}
+      {% endif %}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

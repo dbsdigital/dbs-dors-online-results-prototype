@@ -1,0 +1,43 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% set hintHtml %}
+<p class="govuk-body">{{cms.p1}}</p>
+<p class="govuk-body">{{cms.p2}}</p>
+{% endset %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukCharacterCount({
+        name: "charCount1",
+        id: "charCount1",
+        maxlength: 200,
+        label: {
+          text: cms.h1,
+          classes: "govuk-label--l",
+          isPageHeading: true
+        },
+        hint: {
+          html: hintHtml
+        }
+      }) }}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

@@ -1,0 +1,15 @@
+{
+  "en": {
+    "title": "Is this address correct?",
+    "h1": "Is this address correct?",
+    "p1": "We'll use this address to send you updates about your dispute.",
+    "radio1": {
+      "item1": "Yes, use this address",
+      "item2": "No, I need to change it"
+    }
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

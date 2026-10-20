@@ -1,0 +1,40 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/panel/macro.njk" import govukPanel %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      {% call govukPanel({
+        titleText: cms.h1
+      }) %}
+      {% endcall %}
+
+      <p>{{cms.p1}}</p>
+      <h2 class="govuk-heading-m">{{cms.h2}}</h2>
+      <ul class="govuk-list govuk-list--bullet govuk-!-static-margin-left-5">
+        <li>{{cms.ul1.li1}}</li>
+        <li>{{cms.ul1.li2}}</li>
+        <li>{{cms.ul1.li3}}</li>
+      </ul>
+      <p>{{cms.p2}}</p>
+      <p><a href="#" class="govuk-link">{{cms.p3.link1}}</a> {{cms.p3.text1}}</p>
+
+      <script>
+        function closeWin() {
+          window.close();
+        }
+      </script>
+
+      {{ govukButton({
+        text: cms.button1,
+        classes: "govuk-button--secondary",
+        attributes: {
+          onclick: "closeWin()"
+        }
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
+{% from "govuk/components/details/macro.njk" import govukDetails %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-width-container">
+
+      {% include "result_partial_summary_list_cards-2.njk" %}
+
+      <a href="#" class="govuk-button">
+        {{cms.certificate.shareButton}}
+      </a>
+
+      {% if data.disputeResultVariant == "a" %}
+        <p class="govuk-body">If there is a mistake on your DBS check result or details of your convictions, cautions or barred list information is missing you should tell us by raising a dispute.</p>
+        <p class="govuk-body">If you need to dispute the information, do not share your result with your employer.</p>
+        <p class="govuk-body"><a href="{{nextPage}}" target="_blank" class="govuk-link">Raise a dispute (opens in a new tab)</a></p>
+      {% else %}
+        {{ govukInsetText({
+            html: "<p>" + cms.certificate.insetP1 + "<a href='" + nextPage + "' target= '_blank'>" + cms.certificate.insetLinkText + "</a>" + cms.certificate.insetP2 + "</p>"
+        }) }}
+      {% endif %}
+
+      {{ govukDetails({
+          summaryText: cms.disclaimer.label,
+          html: "
+            <h3>" + cms.disclaimer.heading1 + "</h3>
+            <p>" + cms.disclaimer.p1 + "</p>
+            <ul>
+              <li>" + cms.disclaimer.bullet1 + "</li>
+              <li>" + cms.disclaimer.bullet2 + "</li>
+            </ul>
+            <h3>" + cms.disclaimer.heading2 + "</h3>
+            <p>" + cms.disclaimer.p2 + "</p>
+            <p>" + cms.disclaimer.p3 + "</p>
+            <p>" + cms.disclaimer.p4 + "</p>
+            <p>" + cms.disclaimer.p5 + "</p>
+            <ul>
+              <li>" + cms.disclaimer.bullet3 + "</li>
+              <li>" + cms.disclaimer.bullet4 + "</li>
+              <li>" + cms.disclaimer.bullet5 + "</li>
+            </ul>
+            <p>" + cms.disclaimer.p6 + "</p>
+            <h3>" + cms.disclaimer.heading3 + "</h3>
+            <p>" + cms.disclaimer.p7 + "</p>
+            <ul>
+              <li>" + cms.disclaimer.bullet6 + "</li>
+              <li>" + cms.disclaimer.bullet7 + "</li>
+            </ul>
+            <p>" + cms.disclaimer.p8 + "</p>
+            <ul>
+              <li>" + cms.disclaimer.bullet8 + "</li>
+              <li>" + cms.disclaimer.bullet9 + "</li>
+            </ul>
+            <p>" + cms.disclaimer.p9 + "</p>
+            <ul>
+              <li>" + cms.disclaimer.bullet10 + "</li>
+              <li>" + cms.disclaimer.bullet11 + "</li>
+            </ul>
+            <p>" + cms.disclaimer.p10 + "<a class='govuk-body govuk-link' href='https://www.gov.uk/government/organisations/disclosure-and-barring-service' target='_blank'>" + cms.disclaimer.linkText1 + "</a>
+              " + cms.disclaimer.p11 + "
+            </p>
+            <p>" + cms.disclaimer.p12 + "</p>
+            <h3>" + cms.disclaimer.heading4 + "</h3>
+            <p>" + cms.disclaimer.p13 + "</p>
+            <p>" + cms.disclaimer.p14 + "</p>
+            <ul>
+              <li>" + cms.disclaimer.bullet12 + "</li>
+              <li>" + cms.disclaimer.bullet13 + "</li>
+            </ul>
+            <p>" + cms.disclaimer.p15 + "</p>
+            <p>" + cms.disclaimer.p16 + "</p>
+            <p>" + cms.disclaimer.p17 + "</p>
+            <p>" + cms.disclaimer.p18 + "<a class='govuk-body govuk-link' href='https://www.gov.uk/government/organisations/disclosure-and-barring-service' target='_blank'>" + cms.disclaimer.linkText2 + "</a>
+              " + cms.disclaimer.p19 + "
+            </p>
+          "
+        }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}{% block footer %}
+{% include "footer.njk" %}{% endblock %}

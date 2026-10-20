@@ -1,0 +1,64 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukCheckboxes({
+        name: "waste",
+        fieldset: {
+          legend: {
+            text: cms.h1,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        hint: {
+          text: cms.hint1
+        },
+        items: [
+          {
+            value: "item1",
+            text: cms.items.item1
+          },
+          {
+            value: "item2",
+            text: cms.items.item2
+          },
+          {
+            value: "item3",
+            text: cms.items.item3
+          },
+          {
+            value: "item4",
+            text: cms.items.item4
+          },
+          {
+            value: "item5",
+            text: cms.items.item5
+          },
+          {
+            value: "item6",
+            text: cms.items.item6
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

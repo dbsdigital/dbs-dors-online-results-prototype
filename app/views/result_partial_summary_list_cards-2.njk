@@ -1,0 +1,173 @@
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+<img src="/public/images/Disclosure_and_Barring_Service_Logo.svg" class="dbs-logo">
+
+<div
+  class="govuk-notification-banner govuk-notification-banner--success"
+  role="region"
+  aria-labelledby="govuk-notification-banner-title"
+  data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      {{cms.certificate.resultBoxLabel}}
+    </h2>
+  </div>
+
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading" id="banner-content">
+      {{cms.certificate.resultBoxHeading}}
+    </p>
+    <p>{{cms.certificate.resultBoxP1}}
+      <strong>{{cms.certificate.resultBoxDate}}</strong>
+    </p>
+    <p>
+      <strong>{{cms.certificate.resultBoxP2}}</strong>
+    </p>
+  </div>
+</div>
+
+{{ govukSummaryList({
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key1
+      },
+      value: {
+        text: cms.certificate.value1
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key2
+      },
+      value: {
+        text: cms.certificate.value2
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: cms.certificate.tableHeading1
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key3
+      },
+      value: {
+        text: "David Bowie"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key4
+      },
+      value: {
+        html: "David Jones<br/>Ziggy Stardust<br/>Aladdin Sane"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key5
+      },
+      value: {
+        text: "8 January 1947"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key6
+      },
+      value: {
+        text: "Brixton"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key7
+      },
+      value: {
+        html: "<p>77 Starman Road<br/>London<br/>DB7 77S</p>"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key8
+      },
+      value: {
+        text: cms.certificate.value8
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: cms.certificate.tableHeading2
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key9
+      },
+      value: {
+        text: "Mechanic"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key10
+      },
+      value: {
+        text: cms.certificate.value10
+      }
+    }
+  ]
+}) }}
+
+{{ govukSummaryList({
+  card: {
+    title: {
+      text: cms.certificate.tableHeading3
+    }
+  },
+  rows: [
+    {
+      key: {
+        text: cms.certificate.key11
+      },
+      value: {
+        text: cms.certificate.value12
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key12
+      },
+      value: {
+        text: "Not requested"
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key13
+      },
+      value: {
+        text: cms.certificate.value13
+      }
+    },
+    {
+      key: {
+        text: cms.certificate.key14
+      },
+      value: {
+        text: cms.certificate.value14
+      }
+    }
+  ]
+}) }}

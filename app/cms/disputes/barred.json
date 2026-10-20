@@ -1,0 +1,15 @@
+{
+  "en": {
+    "title": "Which barred list did you expect to see?",
+    "h1": "Which barred list did you expect to see?",
+    "radio1": {
+      "item1": "Children's barred list",
+      "item2": "Adults' barred list",
+      "item3": "Both"
+    }
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}

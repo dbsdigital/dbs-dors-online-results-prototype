@@ -1,0 +1,48 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
+{% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukCheckboxes({
+        name: "checkbox1",
+        fieldset: {
+          legend: {
+            text: cms.h1,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "item1",
+            text: cms.item1
+          }
+        ]
+      }) }}
+
+      {{ govukWarningText({
+        text: cms.warning1,
+        iconFallbackText: "Warning"
+      }) }}
+
+      {{ govukButton({
+        text: cms.button1,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

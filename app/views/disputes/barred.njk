@@ -1,0 +1,49 @@
+{% extends "layouts/layout_disputes.njk" %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/back-link/macro.njk" import govukBackLink %}
+{% from "govuk/components/summary-list/macro.njk" import govukSummaryList %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: commonCms.backlink,
+    href: backLink
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+      {{ govukRadios({
+        name: "radio1",
+        fieldset: {
+          legend: {
+            text: cms.h1,
+            isPageHeading: true,
+            classes: "govuk-fieldset__legend--l"
+          }
+        },
+        items: [
+          {
+            value: "item1",
+            text: cms.radio1.item1
+          },
+          {
+            value: "item2",
+            text: cms.radio1.item2
+          },
+          {
+            value: "item3",
+            text: cms.radio1.item3
+          }
+        ]
+      }) }}
+
+      {{ govukButton({
+        text: commonCms.continue,
+        href: nextPage
+      }) }}
+    </div>
+
+  </div>
+</div>{% endblock %}

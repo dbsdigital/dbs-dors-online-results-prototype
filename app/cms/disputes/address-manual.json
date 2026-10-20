@@ -1,0 +1,16 @@
+{
+  "en": {
+    "title": "Enter your address",
+    "h1": "Enter your address",
+    "textbox1": "Address line 1",
+    "textbox2": "Address line 2 (optional)",
+    "textbox3": "Town or city",
+    "textbox4": "County (optional)",
+    "dropdown1": "Country",
+    "textbox5": "Postcode"
+  },
+  "cy": {
+    "title": "tbc",
+    "p1": "tbc"
+  }
+}
