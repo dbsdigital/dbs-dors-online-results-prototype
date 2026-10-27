@@ -42,6 +42,7 @@
       {% endif %}
 
       <p>{{ cms.p1 }}</p>
+      <p>{{ cms.p2 }}</p>
 
       <ul class="govuk-list govuk-list--bullet">
         <li>{{ cms.bullet1 }}</li>
@@ -50,8 +51,8 @@
       </ul>
 
       <h2 class="govuk-heading-m">{{ cms.h1 }}</h2>
-      <p>{{ cms.p2 }}</p>
       <p>{{ cms.p3 }}</p>
+      <p>{{ cms.p4 }}</p>
 
       {% from "govuk/components/inset-text/macro.njk" import govukInsetText %}
 
@@ -60,12 +61,12 @@
       }) }}
 
       <h2 class="govuk-heading-m">{{ cms.h2 }}</h2>
-      <p>{{ cms.p4 }}</p>
+      <p>{{ cms.p5 }}</p>
 
       {% from "govuk/components/button/macro.njk" import govukButton %}
 
       {{ govukButton({
-          text: "Dechrau" if data['lang'] == "cy" else "Start",
+          text: cms.buttonText,
           isStartButton: true,
           classes: 'govuk-!-margin-top-2 govuk-!-margin-bottom-8',
           href: "/create_account"
