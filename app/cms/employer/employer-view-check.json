@@ -19,7 +19,7 @@
     "bullet7": "os gwiriwyd unrhyw restrau gwaharddedig",
     "bullet8": "y dyddiad y gwnaethoch chi weld y canlyniad",
     "p7": "Mae'r dderbynneb yn cynnwys gwybodaeth o dystysgrif DBS yr ymgeisydd. Os byddwch yn lawrlwytho copi, rhaid i chi ddilyn polisi eich sefydliad ar storio, trin, defnyddio, cadw a gwaredu gwybodaeth tystysgrif DBS.",
-    "buttonText": "Dechrau",
+    "buttonText": "Dechreuwch nawr",
     "buttonLink": "/employer/employer_enter_cert?lang=cy"
   },
   "en": {
@@ -41,8 +41,9 @@
     "bullet6": "if the check is standard or enhanced and the workforce it is for",
     "bullet7": "if any barred lists were checked",
     "bullet8": "the date you viewed the result",
-    "p7": "The receipt contains information from the applicant's DBS certificate. If you download a copy, you must follow your organisation's policy on the storage, handling, use, retention and disposal of DBS certificate information.",
-    "buttonText": "Start",
+    "p7": "The receipt contains information from the applicant's DBS certificate.",
+    "p8": "If you download it, your organisation becomes the data controller for that information. You must follow your organisation's policy for storing, handling, using, keeping and disposing of DBS certificate information.",
+    "buttonText": "Start now",
     "buttonLink": "/employer/employer_enter_cert?lang=en"
   }
 }
